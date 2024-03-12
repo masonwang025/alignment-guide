@@ -7,8 +7,9 @@ export default {
             colors: {
                 background: '#EBEBEB',
                 accent: {
-                    main: '#ACAAA8',
-                    text: '#767676'
+                    400: '#DEDEDE',
+                    500: '#ACAAA8',
+                    600: '#767676'
                 },
                 dark: '#222222',
             },

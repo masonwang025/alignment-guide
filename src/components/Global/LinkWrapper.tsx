@@ -7,7 +7,7 @@ interface LinkWrapperProps {
 
 const LinkWrapper: FC<LinkWrapperProps> = ({ children, href }) => {
     return (
-        <a href={href} className='hover:text-blue-700 underline decoration-1.5 decoration-dotted'>
+        <a href={href} className='hover:text-accent-600 hover:text-opacity-70 underline underline-offset-4 decoration-1.5 decoration-dotted'>
             {children}
         </a>
     );

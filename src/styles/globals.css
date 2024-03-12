@@ -4,22 +4,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/* —————————————— TAILWIND STYLES —————————————— */
+
+@layer components {
+    .debug {
+        @apply border border-red-500;
+    }
+
+    .horizontal {
+        @apply flex flex-row;
+    }
+
+    .vertical {
+        @apply flex flex-col;
+    }
+
+    .center-v {
+        @apply justify-center;
+    }
+
+    .center-h {
+        @apply items-center;
+    }
+
+    .circle {
+        @apply rounded-full shrink-0;
+    }
+}
+
+/* —————————————— NEXTRA STYLES —————————————— */
+
 /* whole site bg color */
 body {
-    background-color: #ebebeb !important;
+    @apply bg-background !important;
 }
 
 /* nav bar bg color */
 .nextra-nav-container {
-    background-color: #ebebeb !important;
+    @apply bg-background !important;
 }
 .nextra-nav-container-blur {
-    background-color: #ebebeb !important;
+    @apply bg-background !important;
     /* --tw-shadow: none !important; */
 }
 
 /* sidebar active button color */
 .nextra-sidebar-container .nx-bg-primary-100 {
-    --tw-bg-opacity: 1;
-    background-color: #dedede !important;
+    @apply bg-accent-400 !important;
+}
+
+/* breadcrumb (little text at the top of the page) */
+.nextra-breadcrumb .nx-text-gray-700 {
+    @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
+}
+
+/* border color (to accomodate darker bg) */
+*,
+::before,
+::after {
+    @apply border-gray-300 !important;
+}
+
+/* footer bg color */
+footer {
+    @apply bg-background !important;
 }

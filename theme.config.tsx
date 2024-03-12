@@ -1,7 +1,9 @@
 import React, { FC, ReactNode } from 'react';
+import Image from 'next/image';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import TextWrapper from './src/components/Global/TextWrapper';
 import LinkWrapper from './src/components/Global/LinkWrapper';
+import logoIcon from './src/assets/logo.svg';
 
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     components?: {
@@ -16,8 +18,15 @@ interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     };
 }
 
+const logo = (
+    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Image src={logoIcon} alt='logo' width={20} height={20} />
+        <p>Alignment Guide</p>
+    </div>
+);
+
 const config: CustomDocsThemeConfig = {
-    logo: <span>Alignment Guide</span>,
+    logo: logo,
     docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
     footer: {
         text: 'Nextra Docs Template',
@@ -36,6 +45,8 @@ const config: CustomDocsThemeConfig = {
         // p: ({ children }) => <TextWrapper type='p'>{children}</TextWrapper>,
         a: ({ href, children }) => <LinkWrapper href={href}>{children}</LinkWrapper>,
     },
+    // hide last updated time (idk just feels like things get outdated really quickly)
+    gitTimestamp: false,
 };
 
 export default config;
