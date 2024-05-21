@@ -7,7 +7,7 @@ interface TextHeaderWrapperProps {
 
 const headingClasses = {
     h1: 'font-serif text-5xl mb-7 mt-5 text-dark',
-    h2: 'font-serif text-3xl  mt-7 mb-7 pb-2 border-b border-gray-200 text-dark',
+    h2: 'font-serif text-3xl  mt-7 mb-7 pb-2 border-b border-gray-300 text-dark',
     h3: 'font-sans text-blue-500 text-xl',
     h4: 'font-sans text-purple-500 text-lg',
     h5: 'font-mono text-cyan-500 text-base',

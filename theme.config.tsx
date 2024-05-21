@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import TextWrapper from './src/components/Global/TextWrapper';
 import LinkWrapper from './src/components/Global/LinkWrapper';
+import './src/styles/globals.css';
 
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     components?: {

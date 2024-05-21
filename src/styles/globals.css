@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
+/* whole site bg color */
+body {
     background-color: #ebebeb !important;
-} */
+}
+
+/* nav bar bg color */
+.nextra-nav-container {
+    background-color: #ebebeb !important;
+}
+.nextra-nav-container-blur {
+    background-color: #ebebeb !important;
+    /* --tw-shadow: none !important; */
+}
+
+/* sidebar active button color */
+.nextra-sidebar-container .nx-bg-primary-100 {
+    --tw-bg-opacity: 1;
+    background-color: #dedede !important;
+}
