@@ -1,17 +1,18 @@
 import React, { FC, ReactNode } from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
-import TextHeaderWrapper from './src/components/Global/TextHeaderWrapper';
+import TextWrapper from './src/components/Global/TextWrapper';
 import LinkWrapper from './src/components/Global/LinkWrapper';
 
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
-    components: {
-        h1: FC<{ children: ReactNode }>;
-        h2: FC<{ children: ReactNode }>;
-        h3: FC<{ children: ReactNode }>;
-        h4: FC<{ children: ReactNode }>;
-        h5: FC<{ children: ReactNode }>;
-        h6: FC<{ children: ReactNode }>;
-        a: FC<{ children: ReactNode; href: string }>;
+    components?: {
+        h1?: FC<{ children: ReactNode }>;
+        h2?: FC<{ children: ReactNode }>;
+        h3?: FC<{ children: ReactNode }>;
+        h4?: FC<{ children: ReactNode }>;
+        h5?: FC<{ children: ReactNode }>;
+        h6?: FC<{ children: ReactNode }>;
+        p?: FC<{ children: ReactNode }>;
+        a?: FC<{ children: ReactNode; href: string }>;
     };
 }
 
@@ -26,12 +27,13 @@ const config: CustomDocsThemeConfig = {
     primaryHue: 45,
     primarySaturation: 2.3,
     components: {
-        h1: ({ children }) => <TextHeaderWrapper headingType='h1'>{children}</TextHeaderWrapper>,
-        h2: ({ children }) => <TextHeaderWrapper headingType='h2'>{children}</TextHeaderWrapper>,
-        h3: ({ children }) => <TextHeaderWrapper headingType='h3'>{children}</TextHeaderWrapper>,
-        h4: ({ children }) => <TextHeaderWrapper headingType='h4'>{children}</TextHeaderWrapper>,
-        h5: ({ children }) => <TextHeaderWrapper headingType='h5'>{children}</TextHeaderWrapper>,
-        h6: ({ children }) => <TextHeaderWrapper headingType='h6'>{children}</TextHeaderWrapper>,
+        h1: ({ children }) => <TextWrapper type='h1'>{children}</TextWrapper>,
+        h2: ({ children }) => <TextWrapper type='h2'>{children}</TextWrapper>,
+        h3: ({ children }) => <TextWrapper type='h3'>{children}</TextWrapper>,
+        h4: ({ children }) => <TextWrapper type='h4'>{children}</TextWrapper>,
+        h5: ({ children }) => <TextWrapper type='h5'>{children}</TextWrapper>,
+        h6: ({ children }) => <TextWrapper type='h6'>{children}</TextWrapper>,
+        // p: ({ children }) => <TextWrapper type='p'>{children}</TextWrapper>,
         a: ({ href, children }) => <LinkWrapper href={href}>{children}</LinkWrapper>,
     },
 };
