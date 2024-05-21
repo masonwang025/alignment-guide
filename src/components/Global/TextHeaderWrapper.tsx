@@ -7,10 +7,10 @@ interface TextHeaderWrapperProps {
 }
 
 const headingClasses = {
-    h1: 'font-sans text-red-500 text-3xl',
-    h2: 'font-sans text-green-500 text-2xl',
-    h3: 'font-serif text-blue-500 text-xl',
-    h4: 'font-serif text-purple-500 text-lg',
+    h1: 'font-serif text-red-500 text-3xl',
+    h2: 'font-serif text-green-500 text-2xl',
+    h3: 'font-sans text-blue-500 text-xl',
+    h4: 'font-sans text-purple-500 text-lg',
     h5: 'font-mono text-cyan-500 text-base',
     h6: 'font-mono text-yellow-500 text-sm',
 };
