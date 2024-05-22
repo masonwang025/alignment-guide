@@ -42,7 +42,7 @@ const config: CustomDocsThemeConfig = {
     darkMode: false,
     nextThemes: { defaultTheme: 'light', forcedTheme: 'light' },
     primaryHue: 45,
-    primarySaturation: 2.3,
+    primarySaturation: 5,
     components: {
         h1: ({ children }) => <TextWrapper type='h1'>{children}</TextWrapper>,
         h2: ({ children }) => <TextWrapper type='h2'>{children}</TextWrapper>,
