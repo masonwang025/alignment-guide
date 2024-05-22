@@ -41,8 +41,9 @@ const config: CustomDocsThemeConfig = {
         // p: ({ children }) => <TextWrapper type='p'>{children}</TextWrapper>,
         a: ({ href, children }) => <LinkWrapper href={href}>{children}</LinkWrapper>,
     },
-    // hide last updated time (idk just feels like things get outdated really quickly)
-    gitTimestamp: false,
+    gitTimestamp: false, // hide last updated time (idk just feels like things get outdated really quickly)
+    // editLink: { component: null },
+    // feedback: { content: null },
 };
 
 export default config;

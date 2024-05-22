@@ -41,10 +41,10 @@ body {
 
 /* nav bar bg color */
 .nextra-nav-container {
-    @apply bg-background !important;
+    @apply bg-background bg-opacity-0 backdrop-blur-md !important;
 }
 .nextra-nav-container-blur {
-    @apply bg-background !important;
+    @apply bg-background bg-opacity-0 backdrop-blur-md !important;
     /* --tw-shadow: none !important; */
 }
 
@@ -58,9 +58,14 @@ body {
     @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
 }
 
+/* TOC bottom bg and shadow color */
 .nextra-toc .nextra-scrollbar .nx-bg-white {
     @apply bg-background !important;
     @apply shadow-none !important;
+}
+
+.nextra-nav {
+    @apply font-serif !important;
 }
 
 /* border color (to accomodate darker bg) */
