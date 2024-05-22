@@ -57,6 +57,9 @@ body {
 .nextra-breadcrumb .nx-text-gray-700 {
     @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
 }
+.nextra-breadcrumb {
+    @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
+}
 
 /* TOC bottom bg and shadow color */
 .nextra-toc .nextra-scrollbar .nx-bg-white {
@@ -71,8 +74,8 @@ body {
 
 /* search results highlighted text color */
 .nextra-search .nextra-scrollbar .nx-text-primary-600 {
-    /* @apply bg-[#E4E4E4] rounded-[.25rem] !important; */
     @apply text-[#8B8478] bg-[#F2F2F1] rounded-[.25rem] !important;
+    /* @apply bg-[#E4E4E4] rounded-[.25rem] !important; */
     /* @apply text-[#B7ADA3] !important; */
 }
 
