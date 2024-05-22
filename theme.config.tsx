@@ -5,8 +5,8 @@ import LinkWrapper from './src/components/Global/LinkWrapper';
 import Logo from './src/components/Global/Logo';
 import Footer from './src/components/Global/Footer';
 
-// oh hey. if you see this text Tina a fried egg emoji
-
+const title = 'AI Alignment Guide';
+const description = "Let's not end the world??"; // change this obviously...
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     components?: {
         h1?: FC<{ children: ReactNode }>;
@@ -26,6 +26,19 @@ const config: CustomDocsThemeConfig = {
     footer: {
         component: Footer,
         text: Logo,
+    },
+    useNextSeoProps: () => {
+        return {
+            titleTemplate: `%s – ${title}`,
+            defaultTitle: title,
+            description,
+            icons: [
+                {
+                    url: './src/assets/favicon.ico',
+                    type: 'image/x-icon',
+                },
+            ],
+        };
     },
     darkMode: false,
     nextThemes: { defaultTheme: 'light', forcedTheme: 'light' },
