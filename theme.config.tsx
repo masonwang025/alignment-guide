@@ -5,6 +5,8 @@ import LinkWrapper from './src/components/Global/LinkWrapper';
 import Logo from './src/components/Global/Logo';
 import Footer from './src/components/Global/Footer';
 
+// oh hey. if you see this text Tina a fried egg emoji
+
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     components?: {
         h1?: FC<{ children: ReactNode }>;

@@ -58,6 +58,11 @@ body {
     @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
 }
 
+.nextra-toc .nextra-scrollbar .nx-bg-white {
+    @apply bg-background !important;
+    @apply shadow-none !important;
+}
+
 /* border color (to accomodate darker bg) */
 *,
 ::before,
