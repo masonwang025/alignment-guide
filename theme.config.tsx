@@ -1,7 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
-import { DefaultSeo } from 'next-seo';
 import TextWrapper from './src/components/Global/TextWrapper';
 import LinkWrapper from './src/components/Global/LinkWrapper';
 import Logo from './src/components/Global/Logo';
