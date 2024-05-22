@@ -1,9 +1,9 @@
 import React, { FC, ReactNode } from 'react';
-import Image from 'next/image';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import TextWrapper from './src/components/Global/TextWrapper';
 import LinkWrapper from './src/components/Global/LinkWrapper';
-import logoIcon from './src/assets/logo.svg';
+import Logo from './src/components/Global/Logo';
+import Footer from './src/components/Global/Footer';
 
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     components?: {
@@ -18,18 +18,12 @@ interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     };
 }
 
-const logo = (
-    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-        <Image src={logoIcon} alt='logo' width={20} height={20} />
-        <p>Alignment Guide</p>
-    </div>
-);
-
 const config: CustomDocsThemeConfig = {
-    logo: logo,
+    logo: Logo,
     docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
     footer: {
-        text: 'Nextra Docs Template',
+        component: Footer,
+        text: Logo,
     },
     darkMode: false,
     nextThemes: { defaultTheme: 'light', forcedTheme: 'light' },
