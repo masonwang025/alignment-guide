@@ -64,8 +64,9 @@ body {
     @apply shadow-none !important;
 }
 
-.nextra-nav {
-    @apply font-serif !important;
+/* search results container (otherwise blur header gets rid of this opacity) */
+.nextra-search .nextra-scrollbar {
+    @apply bg-white !important;
 }
 
 /* border color (to accomodate darker bg) */
