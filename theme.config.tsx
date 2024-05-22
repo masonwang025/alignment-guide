@@ -1,12 +1,12 @@
 import React, { FC, ReactNode } from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
+import { useRouter } from 'next/router';
+import { DefaultSeo } from 'next-seo';
 import TextWrapper from './src/components/Global/TextWrapper';
 import LinkWrapper from './src/components/Global/LinkWrapper';
 import Logo from './src/components/Global/Logo';
 import Footer from './src/components/Global/Footer';
 
-const title = 'AI Alignment Guide';
-const description = "Let's not end the world??"; // change this obviously...
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     components?: {
         h1?: FC<{ children: ReactNode }>;
@@ -28,16 +28,15 @@ const config: CustomDocsThemeConfig = {
         text: Logo,
     },
     useNextSeoProps: () => {
+        const router = useRouter();
+        const title = 'AI Alignment Guide';
+        const description = "Let's not end the world??"; // change this obviously...
         return {
-            titleTemplate: `%s – ${title}`,
+            // home page should just say title instead of Introduction - title
+            titleTemplate: router.pathname === '/' ? title : `%s – ${title}`,
             defaultTitle: title,
             description,
-            icons: [
-                {
-                    url: './src/assets/favicon.ico',
-                    type: 'image/x-icon',
-                },
-            ],
+            icons: [{ url: '/favicon.ico', type: 'image/x-icon' }],
         };
     },
     darkMode: false,
