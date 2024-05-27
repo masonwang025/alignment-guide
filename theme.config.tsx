@@ -55,7 +55,7 @@ const config: CustomDocsThemeConfig = {
     toc: {
         backToTop: true,
     },
-    gitTimestamp: false, // hide last updated time (idk just feels like things get outdated really quickly)
+    gitTimestamp: null, // hide last updated time (idk just feels like things get outdated really quickly)
     // editLink: { component: null },
     // feedback: { content: null },
 };
