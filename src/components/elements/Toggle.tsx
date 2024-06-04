@@ -6,7 +6,7 @@ const Toggle: React.FC<{ title: string | React.ReactNode, children: React.ReactN
         <Accordion type="single" collapsible>
             <AccordionItem value="item-1" className="border-0 pb-0">
                 <AccordionTrigger className="py-0 my-2">{title}</AccordionTrigger>
-                <AccordionContent>{children}</AccordionContent>
+                <AccordionContent className="pb-0">{children}</AccordionContent>
             </AccordionItem>
         </Accordion>
     );

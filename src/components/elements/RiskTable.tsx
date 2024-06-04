@@ -22,7 +22,7 @@ const RiskTable = () => {
                         <tr>
                             <td className={cn(headerClass, "text-right")}>Accident</td>
                             <td className={textCenterClass}>e.g. Self-Driving Car Crashes</td>
-                            <td className={cn(textCenterClass, "bg-highlight-dark")}><i>Oh boy</i></td>
+                            <td className={cn(textCenterClass, "bg-highlight")}><i>Oh boy</i></td>
                         </tr>
                         <tr>
                             <td className={cn(headerClass, "text-right")}>Misuse</td>
