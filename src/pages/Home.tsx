@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Logo from '../components/Globalx/Logo';
+import Logo from '../components/global/Logo';
 
 export default function Home() {
     return (
