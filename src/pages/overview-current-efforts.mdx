@@ -14,6 +14,7 @@ import {
 
 **After reading this, you will have an overview of a few research directions
 at these companies and know where to go to read more.**
+
 </Promise>
 
 <div class="mt-1">
@@ -25,13 +26,14 @@ at these companies and know where to go to read more.**
         Overoptimization.
       </AccordionTrigger>
       <AccordionContent>
-            - **W2SG** is the idea of using a smaller, less intelligent model
+            - **[W2SG](https://openai.com/index/weak-to-strong-generalization/)** is the idea of using a smaller, less intelligent model
             to align a larger, more powerful model while still extracting the
             latent knowledge of the more powerful model.
-            - **Reward Model Overoptimization** examines how models may focus
+            - **[Reward Model Overoptimization](https://arxiv.org/abs/2210.10760)** examines how models may focus
             on optimizing a proxy measure instead of achieving the actual
             objective (i.e. Goodhart’s law). OpenAI has conducted research on
             the scaling laws associated with this phenomenon.
+            - **[Preparedness Framework](https://openai.com/preparedness/):** OpenAI's "processes to track, evaluate, forecast, and protect against catastrophic risks posed by increasingly powerful models."
       </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -41,20 +43,22 @@ at these companies and know where to go to read more.**
       </AccordionTrigger>
       <AccordionContent>
 
-            - **Sleeper Agents:** Humans can act deceptively, appearing helpful
+            - **[Sleeper Agents](https://www.anthropic.com/news/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training):** Humans can act deceptively, appearing helpful
             while secretly pursuing hidden objectives. Anthropic has explored
             whether current safety techniques can eliminate learned deceptive
             strategies in AI systems. In particular, they have found that
             removing deceptive behavior with current techniques is not always
             possible.
 
-            - **Sparse Autoencoders and Monosemanticity:** Many neurons in
+            - **[Sparse Autoencoders and Monosemanticity](https://transformer-circuits.pub/2023/monosemantic-features):** Many neurons in
             neural networks are polysemantic, responding to mixtures of
             seemingly unrelated inputs. This complexity makes interpretability
             challenging, as it becomes difficult to understand the function of
             each component within the network. Sparse Autoencoders generate
             learned features from a trained model, offering more monosemantic
             units of analysis than the model's neurons themselves.
+
+            - **[Responsible Scaling Policy](https://www.anthropic.com/news/anthropics-responsible-scaling-policy):** Anthropic details their protocols surrounding developing increasingly capable AI systems.
 
       </AccordionContent>
     </AccordionItem>
@@ -64,13 +68,13 @@ at these companies and know where to go to read more.**
         Frontier Safety Framework.
       </AccordionTrigger>
       <AccordionContent>
-            - **Activation Steering** is a technique whereby one takes
+            - **[Activation Steering](https://www.alignmentforum.org/posts/C5KAZQib3bzzpeyrg/progress-update-1-from-the-gdm-mech-interp-team-full-update)** is a technique whereby one takes
             activation vectors from the residual stream of a model on specific
             prompts and adds these vectors to the residual stream on a different
             prompt. This manipulation causes the output of the second prompt to
             inherit properties from the first, enabling one to steer the model’s
             outputs toward desired behaviors or themes.
-            - **Frontier Safety Framework:** Deepmind released a specification
+            - **[Frontier Safety Framework](https://deepmind.com/blog/democratizing-access-to-large-scale-language-models-with-frontier-safety-framework)**: Deepmind released a specification
             of protocols for detecting “Critical Capability Levels” of models
             and how to mitigate the risks posed when models surpass these
             capabilities.
