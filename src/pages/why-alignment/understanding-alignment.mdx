@@ -1,6 +1,7 @@
 import Promise from "@/components/elements/Promise";
 import RiskTable from "@/components/elements/RiskTable";
 import StyledText from "@/components/elements/StyledText";
+import Toggle from "@/components/elements/Toggle";
 
 # Understanding AI Alignment
 
@@ -42,14 +43,17 @@ if they don’t, that they don’t competently pursue the wrong thing.
 
 The alignment problem is commonly misunderstood as “aligning the AI’s values/preferences with humans.”
 
-- But the type of alignment we are discussing is not so much about aligning the AI to human values, but to an operator’s intentions (the precise term for this is “intent alignment”).
+<Toggle title="But the type of alignment we are discussing is not so much about aligning the AI to human values, but to an operator’s intentions (the precise term for this is “intent alignment”).">
   Intent alignment is significantly narrower, as it only concerns aligning an AI to its operators intent.
-  That is, even if an aligned system is created, an operator can use it to do “harmful” things, if that’s what they intend. (Although addressing these misuse cases are arguably less urgent than the long-term accident risk that we mentioned above).
+  
+ That is, even if an aligned system is created, an operator can use it to do “harmful” things, if that’s what they intend. (Although addressing these misuse cases are arguably less urgent than the long-term accident risk that we mentioned above).
+</Toggle>
 
 ---
 
-- Sources / dig deeper
+<Toggle title="Sources / dig deeper">
   The definitions above come from **our interpretations** of Paul Christiano’s writing [1]. If you wish to dig deeper into these definitions, he has very precise and thoughtful blog posts:
   - [**AI “safety” vs “control” vs “alignment”**](https://ai-alignment.com/ai-safety-vs-control-vs-alignment-2a4b42a863cc) _(Nov 2016)_: his initial definition attempt
   - [**Clarifying “AI alignment”**](https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6) _(April 2018):_ his latest definition of “AI alignment”
   - [**AI alignment is distinct from its near-term applications**](https://ai-alignment.com/ai-alignment-is-distinct-from-its-near-term-applications-81300500ad2e) _(Dec 2022)_: contains his best definition + an important comment on alignment misconceptions
+</Toggle>
