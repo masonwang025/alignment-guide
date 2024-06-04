@@ -107,11 +107,6 @@ footer {
   @apply bg-background !important;
 }
 
-/* highlight color */
-mark {
-  @apply bg-accent-300;
-}
-
 /* default transition */
 .trans {
   @apply transition-all duration-200 ease-in-out;
