@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
 import Logo from '../components/global/Logo';
 import Section from '../components/home/Section';
 import Cursor from '../components/global/Cursor';
@@ -12,12 +13,16 @@ import graphic from '../assets/magnificent-grants-image.png';
 import ChevronDown from '../assets/icons/chevron-down.svg';
 
 export default function Index() {
+    const [typingComplete, setTypingComplete] = useState(false);
+
     return (
         <div className='custom-cursor'>
             <Cursor />
             <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-screen scroll-smooth'>
-                <Section id='1' className='center-v'>
-                    <h1 className='font-serif lg:text-5xl text-4xl text-center'>AI smarter than us will be our last invention.</h1>
+                {/* ——————— SECTION 1 ——————— */}
+                <Section id='1' className='space-between'>
+                    <div />
+                    <TypeAnimation sequence={['AI smarter than us will be our last invention.', 500, () => setTypingComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center' />
                     {/* <p className='text-center pt-10 text-gray-500'>** i'm thinking of a cool hero i pwomise **</p> */}
                     {/* <motion.svg width='100%' height='auto' viewBox='0 0 1317 616' fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid meet' className='absolute top-0 w-full'>
                         <motion.path
@@ -30,8 +35,20 @@ export default function Index() {
                         />
                     </motion.svg> */}
                     {/* <Image src={graphic} alt='graphic' width={0} height={0} sizes='100vw' className='flex py-5' /> */}
+                    {typingComplete ? (
+                        <motion.a href='#2' className='flex flex-col vertical center-h' initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
+                            <p className='text-lg pb-5 text-center'>So what?</p>
+                            <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
+                                <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
+                            </motion.div>
+                        </motion.a>
+                    ) : (
+                        <div style={{ height: 65 }} />
+                    )}
                 </Section>
-                <Section id='2' className='justify-between vertical center-h'>
+
+                {/* ——————— SECTION 2 ——————— */}
+                <Section id='2' className='space-between vertical center-h'>
                     <div />
                     <div className='flex flex-col vertical center-h space-y-10'>
                         <h1 className='font-serif lg:text-3xl text-2xl'>
@@ -48,7 +65,14 @@ export default function Index() {
                         </motion.div>
                     </a>
                 </Section>
+
+                {/* ——————— SECTION 3 ——————— */}
                 <Section id='3' className='center-v'>
+                    <h1 className='font-serif lg:text-5xl text-4xl'>What's this all about?</h1>
+                </Section>
+
+                {/* ——————— SECTION 4 ——————— */}
+                <Section id='4' className='center-v'>
                     <h1 className='font-serif text-5xl pb-5 text-center'>Blah blah</h1>
                     <div className='flex flex-col items-center justify-center space-y-5'>
                         <Link href='/quickstart'>
