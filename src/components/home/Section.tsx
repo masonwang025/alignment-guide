@@ -6,7 +6,7 @@ const Section = ({ id, children, className, fullWidth, fitWindow }: { id: string
     const heightClass = fitWindow ? 'h-screen' : '';
 
     return (
-        <motion.section id={id} className={`snap-start flex flex-col vertical w-screen ${heightClass} ${px} py-10 ${className}`}>
+        <motion.section id={id} className={`flex flex-col vertical w-screen ${heightClass} ${px} py-10 ${className}`}>
             {children}
         </motion.section>
     );
