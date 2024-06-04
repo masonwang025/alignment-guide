@@ -21,7 +21,7 @@ interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
 
 const config: CustomDocsThemeConfig = {
     logo: Logo,
-    docsRepositoryBase: 'https://github.com/masonwang025/alignment-guide',
+    docsRepositoryBase: 'https://github.com/masonwang025/alignment-guide/tree/main',
     footer: {
         component: Footer,
         text: Logo,
