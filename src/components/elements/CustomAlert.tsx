@@ -10,11 +10,11 @@ interface AlertProps {
     title: string | React.ReactNode;
     description: string | React.ReactNode;
     className?: string;
-    variant: string,
+    variant: "info" | "warning" | "primary" | "default";
     icon?: React.ElementType;
 }
 
-export function CustomAlert({ title, description, className, icon: Icon = InformationCircleIcon, variant }: AlertProps) {
+export function CustomAlert({ title, description, className, icon: Icon = InformationCircleIcon, variant = "default" }: AlertProps) {
 
     return (
         <Alert className={className} variant={variant}>
