@@ -1,19 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import Logo from '../components/global/Logo';
-import Section from '../components/home/Section';
 import Cursor from '../components/global/Cursor';
-import Header from '../components/home/Header';
+import Section from '../components/home/Section';
 import separator from '../assets/separator.svg';
-// import spring from '../assets/home/spring.png';
 import graphic from '../assets/magnificent-grants-image.png';
 import ChevronDown from '../assets/icons/chevron-down.svg';
 
 export default function Index() {
     const [typingComplete, setTypingComplete] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = (event) => {
+            event.preventDefault();
+            const targetId = event.currentTarget.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+            targetElement?.scrollIntoView({ behavior: 'smooth' });
+        };
+
+        const scrollLinks = document.querySelectorAll('.scroll-link');
+        scrollLinks.forEach((link) => {
+            link.addEventListener('click', handleScroll);
+        });
+
+        return () => {
+            scrollLinks.forEach((link) => {
+                link.removeEventListener('click', handleScroll);
+            });
+        };
+    }, []);
 
     return (
         <div className='custom-cursor'>
@@ -23,25 +40,13 @@ export default function Index() {
                 <Section id='1' className='space-between'>
                     <div />
                     <TypeAnimation sequence={['AI smarter than us will be our last invention.', 500, () => setTypingComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center' />
-                    {/* <p className='text-center pt-10 text-gray-500'>** i'm thinking of a cool hero i pwomise **</p> */}
-                    {/* <motion.svg width='100%' height='auto' viewBox='0 0 1317 616' fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid meet' className='absolute top-0 w-full'>
-                        <motion.path
-                            d='M0 579.112C46.8645 579.112 84.8557 595.628 84.8557 616C84.8557 570.286 157.061 533.228 246.131 533.228C335.201 533.228 407.407 570.286 407.407 616C407.407 541.964 490.276 481.945 592.501 481.945C694.726 481.945 777.596 541.964 777.596 616C777.596 485.318 861.576 399.38 965.171 399.38C1068.77 399.38 1152.75 485.318 1152.75 616C1152.75 289.047 1226.29 1 1317 1'
-                            stroke='#222222'
-                            strokeWidth='1'
-                            initial={{ pathLength: 0 }}
-                            animate={{ pathLength: 1 }}
-                            transition={{ duration: 3, ease: 'easeInOut' }}
-                        />
-                    </motion.svg> */}
-                    {/* <Image src={graphic} alt='graphic' width={0} height={0} sizes='100vw' className='flex py-5' /> */}
                     {typingComplete ? (
-                        <motion.a href='#2' className='flex flex-col vertical center-h' initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
+                        <motion.div className='scroll-link flex flex-col vertical center-h' data-target='2' initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
                             <p className='text-lg pb-5 text-center'>So what?</p>
                             <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
                                 <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
                             </motion.div>
-                        </motion.a>
+                        </motion.div>
                     ) : (
                         <div style={{ height: 65 }} />
                     )}
@@ -58,17 +63,36 @@ export default function Index() {
                         <h1 className='font-serif lg:text-3xl text-2xl text-center'>Most people don’t know what AI alignment is, why it’s important, or what you can do to contribute.</h1>
                     </div>
 
-                    <a href='#3' className='flex flex-col vertical center-h'>
+                    <div className='scroll-link flex flex-col vertical center-h' data-target='3'>
                         <p className='text-lg pb-5 text-center'>Here's a guide to get started</p>
                         <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
                             <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
                         </motion.div>
-                    </a>
+                    </div>
                 </Section>
 
                 {/* ——————— SECTION 3 ——————— */}
-                <Section id='3' className='center-v'>
-                    <h1 className='font-serif lg:text-5xl text-4xl'>What's this all about?</h1>
+                <Section id='3' className='space-between'>
+                    <div />
+                    <div>
+                        <h1 className='font-serif lg:text-5xl text-4xl'>What's this all about?</h1>
+                        <div className='pt-12 space-y-7'>
+                            <p>
+                                When you think of misaligned AI, you might think of the Terminator movies, but superintelligence doesn't need to be 'evil' to pose a threat. By default, all intelligent agents—including humans—aim
+                                to preserve themselves, acquire resources, and improve themselves. This means AI smarter than us could inadvertently endanger humanity.
+                            </p>
+                            <p>
+                                To be clear, there is <span className='font-bold'>no guarantee</span> that AI will care about the same exact values we do.
+                            </p>
+                            <p>Think of when the atomic bomb was first being created: before we ever needed to worry about misuse, there was the very real possibility that we could accidentally set the world on fire.</p>
+                            <p>We’re on the path to build something much harder to contain than nuclear weapons—superintelligent AI. Alignment is making sure we don’t accidentally end the world.</p>
+                        </div>
+                    </div>
+                    <div className='scroll-link flex flex-col vertical center-h' data-target='4'>
+                        <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
+                            <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
+                        </motion.div>
+                    </div>
                 </Section>
 
                 {/* ——————— SECTION 4 ——————— */}
