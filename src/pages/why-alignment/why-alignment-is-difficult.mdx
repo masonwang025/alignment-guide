@@ -1,0 +1,70 @@
+import Promise from "@/components/elements/Promise";
+import Toggle from "@/components/elements/Toggle";
+import LinkBadge from "@/components/elements/LinkBadge";
+
+# Why is alignment difficult?
+
+<Promise>
+    Getting an AI to do what we “want it to do” is difficult because it’s incredibly difficult to specify exactly what we “want it to do.”
+
+    **After reading this, you will understand why choosing good goals for AI is challenging and important.**
+
+</Promise>
+
+A generally intelligent AI agent will have goals and choose _actions_ to further those goals. The more intelligent the agent, the more effective it is at achieving its goals.
+
+In the previous page, we defined AI alignment as the problem of ensuring that a powerful AI system is trying to do what its human operator wants it to do.
+
+_Wait, why is that difficult?_
+
+<Toggle title={<div class="bg-highlight font-bold">Because it’s difficult to choose good goals.</div>}>
+    1. Picking objectives is surprisingly hard.
+    2. The strategy that maximizes the objectives is **probably not what you aim for** ([list of examples](https://arc.net/l/quote/eftxikyd) in gaming agents).
+        - E.g., an [OpenAI agent](https://openai.com/index/faulty-reward-functions/) trained in a boat racing game maximizes its score by repeatedly drifting around in the same circle (crashing into other boats, catching on fire, and going the wrong way).
+            
+            And it achieves a score on average 20 percent higher than that achieved by human players.
+
+    3. We have problems specifying simple goals in even simple games, and this is the default. It only gets more difficult as we begin thinking about the real world.
+</Toggle>
+
+### Getting an AI to make you a cup of tea
+
+1. You want your AI to get you a cup of tea. You specify this as its goal.
+2. But there’s a vase in the way, and the robot plows through it. This is because it only cares about one variable: the cup of tea.
+3. So you turn it off, modify it, and it cares about the vase. **But there is always another thing.**
+4. Now, it values the vase and realizes a human is in the environment that may move around and knock over it. So it determines that it’s best to kill the human then.
+
+---
+
+<Toggle title={<div>Anything it doesn’t value will be lost forever. How can we ensure that a powerful AI system doesn’t take actions that conflict with things humans care about?</div>}>
+    
+    If you have a sufficiently powerful agent and manage to come up with a really good objective that cares about the top 20 things humans value, **the 21st thing that humans value will be gone forever**.
+    
+    More specifically, an agent that only cares about a subset of the variables in a system will be willing to trade off arbitrarily large amounts of any variables that *aren’t* part of its goal for arbitrarily tiny increases in any of the things that *are* in its goal.
+    
+    >“A system that is optimizing a function of *n* variables, where the objective depends on subset of size *k\<n*, will often set the remaining unconstrained variables to extreme values. If one of those unconstrained variables is something we care about, the solution found may be *highly undesirable*.” - Stuart Russell
+    >
+</Toggle>
+
+<Toggle title={<div>But that scenario is unrealistic in many ways. One important way is that you wouldn’t be able to “turn it off.”</div>}>
+    - Turning it off will prevent it from achieving its objective.
+    - It will fight you and, even worse, deceive you (e.g., behave until it’s in a position where you can’t turn it off, and then go after its actual objective of the tea).
+</Toggle>
+
+This is a **convergent instrumental goal** (it doesn’t matter what the end goal is), as are self-preservation, goal preservation, resource acquisition, and self-improvement. Thus, **Artificial General Intelligence is dangerous by default.** (More in [Superintelligence: default dangerous](https://www.notion.so/Superintelligence-default-dangerous-9ef0d11a444845eda56b09077b781547?pvs=21).)
+
+### We aren’t on track to build this safely: AI today is misaligned.
+
+Models like GPT-4 can’t take over the world but are still **misaligned** (they will often do things their designers didn’t want, such as lie or be offensive.)
+
+<Toggle title={<div>This is concerning because we are tasked with aligning something far more intelligent than us when we cannot properly align far weaker AI.</div>}>
+
+Here’s a way to think about this problem: say you gave the goal of “acquire/create as many paperclips as possible” to a baby. The baby may knock over some items on your table to gather a few paper clips, which isn’t horrible.
+
+Now, imagine you gave that same goal to Elon Musk. If that became his sole purpose, he could cause significant damage to the world in his pursuit.
+
+Today’s language models can be considered the “babies.” The superintelligence we have to align may be orders of magnitude more intelligent—and, in turn, possibly more impactful/influential—than Elon Musk.
+
+</Toggle>
+
+We also **may only get one shot** (<LinkBadge text="Why this is urgent" link="/why-alignment/why-this-is-urgent" />).
