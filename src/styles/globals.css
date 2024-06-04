@@ -116,3 +116,8 @@ footer {
 h3 {
   @apply mt-4;
 }
+
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
