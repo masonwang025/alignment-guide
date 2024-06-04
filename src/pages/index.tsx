@@ -16,19 +16,19 @@ export default function Index() {
         <div className='custom-cursor'>
             <Cursor />
             <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-screen scroll-smooth'>
-                <Section id='1' fullWidth className='center-v'>
+                <Section id='1' className='center-v'>
                     <h1 className='font-serif lg:text-5xl text-4xl text-center'>AI smarter than us will be our last invention.</h1>
                     <p className='text-center pt-10 text-gray-500'>** i'm thinking of a cool hero i pwomise **</p>
                     {/* <motion.svg width='100%' height='auto' viewBox='0 0 1317 616' fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid meet' className='absolute top-0 w-full'>
-                    <motion.path
-                        d='M0 579.112C46.8645 579.112 84.8557 595.628 84.8557 616C84.8557 570.286 157.061 533.228 246.131 533.228C335.201 533.228 407.407 570.286 407.407 616C407.407 541.964 490.276 481.945 592.501 481.945C694.726 481.945 777.596 541.964 777.596 616C777.596 485.318 861.576 399.38 965.171 399.38C1068.77 399.38 1152.75 485.318 1152.75 616C1152.75 289.047 1226.29 1 1317 1'
-                        stroke='#222222'
-                        strokeWidth='1'
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
-                        transition={{ duration: 3, ease: 'easeInOut' }}
-                    />
-                </motion.svg> */}
+                        <motion.path
+                            d='M0 579.112C46.8645 579.112 84.8557 595.628 84.8557 616C84.8557 570.286 157.061 533.228 246.131 533.228C335.201 533.228 407.407 570.286 407.407 616C407.407 541.964 490.276 481.945 592.501 481.945C694.726 481.945 777.596 541.964 777.596 616C777.596 485.318 861.576 399.38 965.171 399.38C1068.77 399.38 1152.75 485.318 1152.75 616C1152.75 289.047 1226.29 1 1317 1'
+                            stroke='#222222'
+                            strokeWidth='1'
+                            initial={{ pathLength: 0 }}
+                            animate={{ pathLength: 1 }}
+                            transition={{ duration: 3, ease: 'easeInOut' }}
+                        />
+                    </motion.svg> */}
                     {/* <Image src={graphic} alt='graphic' width={0} height={0} sizes='100vw' className='flex py-5' /> */}
                 </Section>
                 <Section id='2' className='justify-between vertical center-h'>
