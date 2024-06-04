@@ -7,7 +7,7 @@ import Section from '../components/home/Section';
 import Cursor from '../components/global/Cursor';
 import Header from '../components/home/Header';
 import separator from '../assets/separator.svg';
-import spring from '../assets/home/spring.png';
+// import spring from '../assets/home/spring.png';
 import graphic from '../assets/magnificent-grants-image.png';
 import ChevronDown from '../assets/icons/chevron-down.svg';
 
@@ -16,7 +16,7 @@ export default function Index() {
         <div className='custom-cursor'>
             <Cursor />
             <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-screen scroll-smooth'>
-                <Section id='1' fullWidth>
+                <Section id='1' fullWidth className='center-v'>
                     <h1 className='font-serif lg:text-5xl text-4xl text-center'>AI smarter than us will be our last invention.</h1>
                     <p className='text-center pt-10 text-gray-500'>** i'm thinking of a cool hero i pwomise **</p>
                     {/* <motion.svg width='100%' height='auto' viewBox='0 0 1317 616' fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid meet' className='absolute top-0 w-full'>
@@ -43,12 +43,12 @@ export default function Index() {
 
                     <a href='#3' className='flex flex-col vertical center-h'>
                         <p className='text-lg pb-5 text-center'>Here's a guide to get started</p>
-                        <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} className='z-1'>
+                        <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
                             <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
                         </motion.div>
                     </a>
                 </Section>
-                <Section id='3'>
+                <Section id='3' className='center-v'>
                     <h1 className='font-serif text-5xl pb-5 text-center'>Blah blah</h1>
                     <div className='flex flex-col items-center justify-center space-y-5'>
                         <Link href='/quickstart'>

@@ -38,7 +38,7 @@ const Cursor = () => {
     }, []);
 
     return (
-        <div ref={cursorRef} className='fixed left-0 top-0 z-1000 pointer-events-none hidden transform -translate-x-1/2 -translate-y-1/2'>
+        <div ref={cursorRef} className='fixed left-0 top-0 z-1000 pointer-events-none hidden transform -translate-x-1/2 -translate-y-1/2' style={{ zIndex: 1000 }}>
             <div className='size-14 rounded-full backdrop-blur-[2px] border border-dark flex justify-center items-center'>
                 {/* centered inner div */}
                 <div className='size-2.5 rounded-full bg-dark'></div>
