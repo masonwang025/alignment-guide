@@ -26,7 +26,7 @@ const config = {
         },
         highlight: {
           DEFAULT: "#a8e0e4",
-          dark: "#bce6e8",
+          dark: "#719699",
         },
         dark: "#222222",
       },
