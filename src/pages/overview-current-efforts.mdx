@@ -11,86 +11,71 @@ import {
 <Promise>
   There are many great organizations conducting significant alignment research.
   Here are a few of them and a brief overview of their work.
-  <b>
-    After reading this, you will have an overview of a few research directions
-    at these companies and know where to go to read more.
-  </b>
+
+**After reading this, you will have an overview of a few research directions
+at these companies and know where to go to read more.**
 </Promise>
 
 <div class="mt-1">
   <Accordion type="single" collapsible className="w-full">
     <AccordionItem value="item-1">
       <AccordionTrigger>
-        <b>OpenAI</b> is working on Weak-to-strong generalization (W2SG) and
+        **OpenAI** is working on Weak-to-strong generalization (W2SG) and
         have also conducted prior work on understanding Reward Model
         Overoptimization.
       </AccordionTrigger>
       <AccordionContent>
-        <ul className="list-decimal">
-          <li>
-            <b>W2SG</b> is the idea of using a smaller, less intelligent model
+            - **W2SG** is the idea of using a smaller, less intelligent model
             to align a larger, more powerful model while still extracting the
             latent knowledge of the more powerful model.
-          </li>
-          <li>
-            <b>Reward Model Overoptimization</b> examines how models may focus
+            - **Reward Model Overoptimization** examines how models may focus
             on optimizing a proxy measure instead of achieving the actual
             objective (i.e. Goodhart’s law). OpenAI has conducted research on
             the scaling laws associated with this phenomenon.
-          </li>
-        </ul>
       </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
       <AccordionTrigger>
-        <b>Anthropic</b> is working on understanding Sleeper Agents, Sparse
+        **Anthropic** is working on understanding Sleeper Agents, Sparse
         Autoencoders (SAEs), and Circuit Analysis.
       </AccordionTrigger>
       <AccordionContent>
-        <ul>
-          <li>
-            <b>Sleeper Agents:</b> Humans can act deceptively, appearing helpful
+
+            - **Sleeper Agents:** Humans can act deceptively, appearing helpful
             while secretly pursuing hidden objectives. Anthropic has explored
             whether current safety techniques can eliminate learned deceptive
             strategies in AI systems. In particular, they have found that
             removing deceptive behavior with current techniques is not always
             possible.
-          </li>
-          <li>
-            <b>Sparse Autoencoders and Monosemanticity:</b> Many neurons in
+
+            - **Sparse Autoencoders and Monosemanticity:** Many neurons in
             neural networks are polysemantic, responding to mixtures of
             seemingly unrelated inputs. This complexity makes interpretability
             challenging, as it becomes difficult to understand the function of
             each component within the network. Sparse Autoencoders generate
             learned features from a trained model, offering more monosemantic
             units of analysis than the model's neurons themselves.
-          </li>
-        </ul>
+
       </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
       <AccordionTrigger>
-        <b>Google Deepmind</b> is working on Activation Steering and their
+        **Google Deepmind** is working on Activation Steering and their
         Frontier Safety Framework.
       </AccordionTrigger>
       <AccordionContent>
-        <ul>
-          <li>
-            <b>Activation Steering</b> is a technique whereby one takes
+            - **Activation Steering** is a technique whereby one takes
             activation vectors from the residual stream of a model on specific
             prompts and adds these vectors to the residual stream on a different
             prompt. This manipulation causes the output of the second prompt to
             inherit properties from the first, enabling one to steer the model’s
             outputs toward desired behaviors or themes.
-          </li>
-          <li>
-            <b>Frontier Safety Framework:</b> Deepmind released a specification
+            - **Frontier Safety Framework:** Deepmind released a specification
             of protocols for detecting “Critical Capability Levels” of models
             and how to mitigate the risks posed when models surpass these
             capabilities.
-          </li>
-        </ul>
       </AccordionContent>
     </AccordionItem>
+
   </Accordion>
 </div>
