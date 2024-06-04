@@ -20,6 +20,7 @@ const config = {
           light: "#F2F2F2", // Gray95
         },
         accent: {
+          300: "#bce6e8bb", // teal-ish? don't kill me
           400: "#DEDEDE",
           500: "#ACAAA8",
           600: "#767676",

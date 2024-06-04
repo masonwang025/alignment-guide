@@ -111,3 +111,8 @@ footer {
 .trans {
   @apply transition-all duration-200 ease-in-out;
 }
+
+/* TEMPORARY FIX */
+h3 {
+  @apply mt-4;
+}
