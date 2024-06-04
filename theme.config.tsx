@@ -1,10 +1,10 @@
 import React, { FC, ReactNode } from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
-import TextWrapper from './src/components/Global/TextWrapper';
-import LinkWrapper from './src/components/Global/LinkWrapper';
-import Logo from './src/components/Global/Logo';
-import Footer from './src/components/Global/Footer';
+import TextWrapper from './src/components/global/TextWrapper';
+import LinkWrapper from './src/components/global/LinkWrapper';
+import Logo from './src/components/global/Logo';
+import Footer from './src/components/global/Footer';
 
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     components?: {

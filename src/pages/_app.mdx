@@ -1,15 +1,15 @@
-import '../styles/globals.css';
-import Head from 'next/head';
-import Cursor from '../components/Global/Cursor';
+import "../styles/globals.css";
+import Head from "next/head";
+import Cursor from "../components/global/Cursor";
 
 export default function App({ Component, pageProps }) {
-    return (
-        <>
-            {/* <Cursor /> */}
-            <Head>
-                <link rel='icon' href='/favicon.ico' />
-            </Head>
-            <Component {...pageProps} />
-        </>
-    );
+  return (
+    <>
+      {/* <Cursor /> */}
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
