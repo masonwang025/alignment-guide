@@ -90,3 +90,8 @@ body {
 footer {
   @apply bg-background !important;
 }
+
+/* default transition */
+.trans {
+  @apply transition-all duration-200 ease-in-out;
+}

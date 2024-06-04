@@ -1,6 +1,8 @@
 {
   "quickstart": "Quickstart",
-  "advanced": "Advanced (A Folder)",
+  "why-alignment": "Why Alignment Urgently Matters",
+  "overview-current-efforts": "Overview of Current Efforts",
+  "next-steps": "Next Steps",
   "about": {
     "title": "About",
     "type": "page"

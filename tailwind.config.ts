@@ -14,7 +14,11 @@ const config = {
     },
     extend: {
       colors: {
-        background: "#EBEBEB",
+        background: {
+          // https://www.color-hex.com/color-names.html
+          DEFAULT: "#EBEBEB", // Gray92
+          light: "#F2F2F2", // Gray95
+        },
         accent: {
           400: "#DEDEDE",
           500: "#ACAAA8",
