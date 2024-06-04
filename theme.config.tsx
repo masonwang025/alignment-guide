@@ -21,7 +21,7 @@ interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
 
 const config: CustomDocsThemeConfig = {
     logo: Logo,
-    docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+    docsRepositoryBase: 'https://github.com/masonwang025/alignment-guide',
     footer: {
         component: Footer,
         text: Logo,

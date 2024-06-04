@@ -2,15 +2,5 @@
   "quickstart": "Quickstart",
   "why-alignment": "Why Alignment Urgently Matters",
   "overview-current-efforts": "Overview of Current Efforts",
-  "next-steps": "Next Steps",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/masonwang025",
-    "newWindow": true
-  }
+  "next-steps": "Next Steps"
 }
