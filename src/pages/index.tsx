@@ -21,7 +21,7 @@ export default function Index() {
     return (
         <div className='custom-cursor'>
             <Cursor />
-            <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-screen scroll-smooth'>
+            <div className='snap-y overflow-y-scroll w-screen h-screen scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
                 <Section id='1' className='space-between' fitWindow>
                     <div />
@@ -58,7 +58,7 @@ export default function Index() {
                 </Section>
 
                 {/* ——————— SECTION 3 ——————— */}
-                <Section id='3' className='space-y-20'>
+                <div id='3' className='space-y-20'>
                     <div>
                         <h1 className='font-serif md:text-5xl text-4xl'>What's this all about?</h1>
                         <div className='pt-12 space-y-7'>
@@ -141,7 +141,7 @@ export default function Index() {
                         </div>
                     </div>
                     <Footer />
-                </Section>
+                </div>
             </div>
             <style jsx global>{`
                 .custom-cursor {
