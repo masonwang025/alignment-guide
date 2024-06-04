@@ -6,7 +6,7 @@ const Footer = () => (
         <Link href='/' className='hover:opacity-75'>
             <Logo />
         </Link>
-        <p className='text-accent-600 text-xs'>© 2024 or something like that</p>
+        <p className='text-accent-600 text-xs'>© 2024 The Alignment Guide Project</p>
     </div>
 );
 

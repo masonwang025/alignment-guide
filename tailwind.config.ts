@@ -1,16 +1,11 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx,md,mdx}"],
   prefix: "",
   theme: {
     container: {
+      // from shadcn
       center: true,
       padding: "2rem",
       screens: {
@@ -18,6 +13,20 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        background: "#EBEBEB",
+        accent: {
+          400: "#DEDEDE",
+          500: "#ACAAA8",
+          600: "#767676",
+        },
+        dark: "#222222",
+      },
+      fontFamily: {
+        serif: ["EB Garamond", "serif"],
+        sans: ["Arial", "sans-serif"],
+      },
+      // from shadcn
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -35,6 +44,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
