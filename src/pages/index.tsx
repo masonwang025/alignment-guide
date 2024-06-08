@@ -19,7 +19,7 @@ export default function Index() {
     };
 
     return (
-        <div className='custom-cursor'>
+        <div className='custom-cursor absolute inset-0'>
             <Cursor />
             <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-screen scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
@@ -68,24 +68,24 @@ export default function Index() {
                     {/* todo: modularize to reuse components */}
                     <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
                         <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
-                            <div className="flex flex-col lg:flex-row lg:border-b-0 text-center font-serif text-2xl xl:text-3xl">
-                                <div className="lg:w-1/2 lg:border-r">
-                                    <div className="p-4 border-b">
-                                        <span className="italic text-gray-700 text-xl lg:text-2xl">01</span>
+                            <div className='flex flex-col lg:flex-row lg:border-b-0 text-center font-serif text-2xl xl:text-3xl'>
+                                <div className='lg:w-1/2 lg:border-r'>
+                                    <div className='p-4 border-b'>
+                                        <span className='italic text-gray-700 text-xl lg:text-2xl'>01</span>
                                         <h2>Why alignment urgently matters</h2>
                                     </div>
-                                    <div className="p-4 border-b lg:border-b-0">
-                                        <span className="italic text-gray-700 text-xl lg:text-2xl">02</span>
+                                    <div className='p-4 border-b lg:border-b-0'>
+                                        <span className='italic text-gray-700 text-xl lg:text-2xl'>02</span>
                                         <h2>Overview of current efforts</h2>
                                     </div>
                                 </div>
-                                <div className="lg:w-1/2 border-b-0">
-                                    <div className="p-4 border-b lg:border-b-0">
-                                        <span className="italic text-gray-700 text-xl lg:text-2xl">03.</span>
+                                <div className='lg:w-1/2 border-b-0'>
+                                    <div className='p-4 border-b lg:border-b-0'>
+                                        <span className='italic text-gray-700 text-xl lg:text-2xl'>03</span>
                                         <h2>Research Directions</h2>
                                     </div>
-                                    <div className="p-4 lg:border-t lg:">
-                                        <span className="italic text-gray-700 text-xl lg:text-2xl">04</span>
+                                    <div className='p-4 lg:border-t lg:'>
+                                        <span className='italic text-gray-700 text-xl lg:text-2xl'>04</span>
                                         <h2>Concrete Next Steps</h2>
                                     </div>
                                 </div>
@@ -99,7 +99,6 @@ export default function Index() {
                                 </p>
                             </Link>
                         </div>
-
 
                         {/* <div className='border border-gray-300 rounded-lg p-5 spacing-y-5'>
                             <h1 className='font-serif md:text-4xl text-3xl text-center mb-2'>Introduction</h1>
