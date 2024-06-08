@@ -64,8 +64,44 @@ export default function Index() {
                 {/* ——————— SECTION 3 ——————— */}
                 <Section id='3' className='space-between' fullWidth fullHeight>
                     <div />
+                    {/* hacky borders? */}
+                    {/* todo: modularize to reuse components */}
                     <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
-                        <div className='border border-gray-300 rounded-lg p-5 spacing-y-5'>
+                        <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
+                            <div className="flex flex-col lg:flex-row lg:border-b-0 text-center font-serif text-2xl xl:text-3xl">
+                                <div className="lg:w-1/2 lg:border-r">
+                                    <div className="p-4 border-b">
+                                        <span className="italic text-gray-700 text-xl lg:text-2xl">01</span>
+                                        <h2>Why alignment urgently matters</h2>
+                                    </div>
+                                    <div className="p-4 border-b lg:border-b-0">
+                                        <span className="italic text-gray-700 text-xl lg:text-2xl">02</span>
+                                        <h2>Overview of current efforts</h2>
+                                    </div>
+                                </div>
+                                <div className="lg:w-1/2 border-b-0">
+                                    <div className="p-4 border-b lg:border-b-0">
+                                        <span className="italic text-gray-700 text-xl lg:text-2xl">03.</span>
+                                        <h2>Research Directions</h2>
+                                    </div>
+                                    <div className="p-4 lg:border-t lg:">
+                                        <span className="italic text-gray-700 text-xl lg:text-2xl">04</span>
+                                        <h2>Concrete Next Steps</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='flex flex-col items-center justify-center space-y-5'>
+                            <Link href='/introduction'>
+                                <p className='bg-background text-black py-2 px-4 rounded-lg shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] transition-shadow duration-200 hover:shadow-[inset_0.2rem_0.2rem_0.5rem_rgb(225,226,228),inset_-0.2rem_-0.2rem_0.5rem_rgb(255,255,255)]'>
+                                    Open Guide
+                                </p>
+                            </Link>
+                        </div>
+
+
+                        {/* <div className='border border-gray-300 rounded-lg p-5 spacing-y-5'>
                             <h1 className='font-serif md:text-4xl text-3xl text-center mb-2'>Introduction</h1>
                             <p className='text-lg text-center pb-5'>What we think you should read or do first</p>
                             <div className='flex flex-col items-center justify-center space-y-5'>
@@ -75,7 +111,7 @@ export default function Index() {
                                     </p>
                                 </Link>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <Footer />
                 </Section>
