@@ -21,9 +21,9 @@ export default function Index() {
     return (
         <div className='custom-cursor'>
             <Cursor />
-            <div className='overflow-y-scroll w-screen h-screen scroll-smooth'>
+            <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-screen scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
-                <Section id='1' className='space-between center-h' fitWindow>
+                <Section id='1' className='space-between center-h'>
                     <div />
                     <div className='w-3/4 md:w-1/2 text-center center-h'>
                         <TypeAnimation sequence={['AI smarter than us will be our ', () => setPhraseComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center' />
@@ -31,25 +31,19 @@ export default function Index() {
                     </div>
 
                     {typingComplete ? (
-                        <motion.div
-                            className='flex flex-col vertical center-h'
-                            onClick={() => handleScroll('2')}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, ease: 'easeInOut' }}
-                        >
+                        <motion.div className='flex flex-col vertical center-h' onClick={() => handleScroll('2')} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
                             <p className='text-lg pb-5 text-center'>So what?</p>
                             <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
                                 <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
                             </motion.div>
                         </motion.div>
                     ) : (
-                        <div className="h-32 debug md:h-16" />
+                        <div className='h-32 md:h-16' />
                     )}
                 </Section>
 
                 {/* ——————— SECTION 2 ——————— */}
-                <Section id='2' className='space-between vertical center-h' fitWindow>
+                <Section id='2' className='space-between vertical center-h'>
                     <div />
                     <div className='flex flex-col vertical center-h space-y-10'>
                         <h1 className='font-serif md:text-3xl text-2xl text-center'>
@@ -68,9 +62,8 @@ export default function Index() {
                 </Section>
 
                 {/* ——————— SECTION 3 ——————— */}
-                <div id='3' className='space-y-20'>
+                <Section id='3' className='space-between' fullWidth fullHeight>
                     <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
-
                         <div className='border border-gray-300 rounded-lg p-5 spacing-y-5'>
                             <h1 className='font-serif md:text-4xl text-3xl text-center'>Introduction</h1>
                             <p className='text-lg text-center pb-5'>What we think you should read or do first</p>
@@ -85,7 +78,7 @@ export default function Index() {
                     </div>
 
                     <Footer />
-                </div>
+                </Section>
             </div>
             <style jsx global>{`
                 .custom-cursor {
