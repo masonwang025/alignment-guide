@@ -66,23 +66,23 @@ export default function Index() {
                     <div />
                     {/* todo: modularize to reuse components */}
                     {/* TODO: not to fret, still need to add borders */}
-                    <div className='md:px-28 sm:px-24 px-2 space-y-20 pt-5'>
-                        <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-4 items-center'>
-                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
-                                <span className='italic text-gray-700 text-xl lg:text-2xl'>01</span>
-                                <div className='text-3xl'>Why alignment urgently matters</div>
+                    <div className='lg:px-24 md:px-36 sm:px-32 px-16 sm:space-y-20 space-y-10 pt-5'>
+                        <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-0 items-center'>
+                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-r'>
+                                <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>01</span>
+                                <div className='sm:text-2xl md:text-3xl text-xl'>Why alignment urgently matters</div>
+                            </div>
+                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl border-b border-gray-300'>
+                                <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>02</span>
+                                <div className='sm:text-2xl md:text-3xl text-xl'>Overview of current efforts</div>
+                            </div>
+                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-b-0 lg:border-r'>
+                                <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>03</span>
+                                <div className='sm:text-2xl md:text-3xl text-xl'>Research directions</div>
                             </div>
                             <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
-                                <span className='italic text-gray-700 text-xl lg:text-2xl'>02</span>
-                                <div className='text-3xl'>Overview of current efforts</div>
-                            </div>
-                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
-                                <span className='italic text-gray-700 text-xl lg:text-2xl'>03</span>
-                                <div className='text-3xl'>Research directions</div>
-                            </div>
-                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
-                                <span className='italic text-gray-700 text-xl lg:text-2xl'>04</span>
-                                <div className='text-3xl'>Concrete next steps</div>
+                                <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>04</span>
+                                <div className='sm:text-2xl md:text-3xl text-xl'>Concrete next steps</div>
                             </div>
                         </div>
 
