@@ -64,31 +64,25 @@ export default function Index() {
                 {/* ——————— SECTION 3 ——————— */}
                 <Section id='3' className='space-between' fullWidth fullHeight>
                     <div />
-                    {/* hacky borders? */}
                     {/* todo: modularize to reuse components */}
-                    <div className='md:px-26 sm:px-20 px-2 space-y-20 pt-5'>
-                        <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
-                            <div className='flex flex-col lg:flex-row lg:border-b-0 text-center font-serif text-2xl xl:text-3xl'>
-                                <div className='lg:w-1/2 lg:border-r'>
-                                    <div className='p-4 border-b space-y-2'>
-                                        <span className='italic text-gray-700 text-xl lg:text-2xl'>01</span>
-                                        <div className='font-serif text-3xl'>Why alignment urgently matters</div>
-                                    </div>
-                                    <div className='p-4 border-b lg:border-b-0 space-y-2'>
-                                        <span className='italic text-gray-700 text-xl lg:text-2xl'>02</span>
-                                        <div className='font-serif text-3xl'>Overview of current efforts</div>
-                                    </div>
-                                </div>
-                                <div className='lg:w-1/2 border-b-0'>
-                                    <div className='p-4 border-b lg:border-b-0 space-y-2'>
-                                        <span className='italic text-gray-700 text-xl lg:text-2xl'>03</span>
-                                        <div className='font-serif text-3xl'>Research directions</div>
-                                    </div>
-                                    <div className='p-4 lg:border-t space-y-2'>
-                                        <span className='italic text-gray-700 text-xl lg:text-2xl'>04</span>
-                                        <div className='font-serif text-3xl'>Concrete next steps</div>
-                                    </div>
-                                </div>
+                    {/* TODO: not to fret, still need to add borders */}
+                    <div className='md:px-28 sm:px-24 px-2 space-y-20 pt-5'>
+                        <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-4 items-center'>
+                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
+                                <span className='italic text-gray-700 text-xl lg:text-2xl'>01</span>
+                                <div className='text-3xl'>Why alignment urgently matters</div>
+                            </div>
+                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
+                                <span className='italic text-gray-700 text-xl lg:text-2xl'>02</span>
+                                <div className='text-3xl'>Overview of current efforts</div>
+                            </div>
+                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
+                                <span className='italic text-gray-700 text-xl lg:text-2xl'>03</span>
+                                <div className='text-3xl'>Research directions</div>
+                            </div>
+                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
+                                <span className='italic text-gray-700 text-xl lg:text-2xl'>04</span>
+                                <div className='text-3xl'>Concrete next steps</div>
                             </div>
                         </div>
 
