@@ -44,7 +44,7 @@ export default function Index() {
                             </motion.div>
                         </motion.div>
                     ) : (
-                        <div className="h-32 debug md:h-16" />
+                        <div className="h-32 md:h-16" />
                     )}
                 </Section>
 
