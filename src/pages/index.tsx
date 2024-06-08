@@ -86,7 +86,7 @@ export default function Index() {
                                     </div>
                                     <div className='p-4 lg:border-t space-y-2'>
                                         <span className='italic text-gray-700 text-xl lg:text-2xl'>04</span>
-                                        <div className='font-serif text-3xl'>Concrete next steps</div>
+                                        <div className='font-serif text-3xl'>Next steps</div>
                                     </div>
                                 </div>
                             </div>
