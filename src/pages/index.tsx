@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -8,7 +8,7 @@ import Section from '../components/home/Section';
 import Footer from '../components/global/Footer';
 import separator from '../assets/separator.svg';
 import ChevronDown from '../assets/icons/chevron-down.svg';
-import ParticlesBackground from '../components/home/ParticlesBackground';
+import ParticlesContainer from '../components/home/particles/ParticlesContainer';
 
 const useSectionObserver = (setParticlesVisible) => {
     const sectionRefs = useRef<(HTMLElement | null)[]>([]);
@@ -58,17 +58,12 @@ export default function Index() {
         targetElement?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const particlesMemo = useMemo(() => <ParticlesContainer particlesVisible={particlesVisible} />, [particlesVisible]);
+
     return (
         <div className='custom-cursor'>
             <Cursor />
-            <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: particlesVisible ? 1 : 0, opacity: particlesVisible ? 1 : 0 }}
-                transition={{ duration: 1 }}
-                style={{ position: 'absolute', width: '100%', height: '100%', zIndex: -1000 }}
-            >
-                <ParticlesBackground />
-            </motion.div>
+            {particlesMemo}
             <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-[calc(100dvh)] scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
                 <Section
@@ -84,16 +79,18 @@ export default function Index() {
                         {phraseComplete && <TypeAnimation sequence={['last invention.', 500, () => setTypingComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif text-4xl sm:text-5xl italic' />}
                     </div>
 
-                    {typingComplete ? (
-                        <motion.div className='flex flex-col vertical center-h' onClick={() => handleScroll('2')} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
-                            <p className='text-lg pb-5 text-center'>So what?</p>
-                            <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
-                                <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
-                            </motion.div>
+                    <motion.div
+                        className={`flex flex-col vertical center-h ${typingComplete ? 'visible' : 'invisible'}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={typingComplete ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 1, ease: 'easeInOut' }}
+                        onClick={() => handleScroll('2')}
+                    >
+                        <p className='text-lg pb-5 text-center'>So what?</p>
+                        <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
+                            <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
                         </motion.div>
-                    ) : (
-                        <div className='h-32 md:h-16' />
-                    )}
+                    </motion.div>
                 </Section>
 
                 {/* ——————— SECTION 2 ——————— */}
