@@ -7,7 +7,7 @@ const Section = ({ id, children, className, fullWidth, fitWindow, snap }: { id: 
     const snapClass = snap ? 'snap-start' : '';
 
     return (
-        <motion.section id={id} className={`flex flex-col vertical w-screen ${heightClass} ${px} py-10 ${className} ${snapClass}`}>
+        <motion.section id={id} className={`flex flex-col vertical w-screen ${heightClass} ${px} py-10 ${className} ${snapClass} pb-24 md:pb-16`}>
             {children}
         </motion.section>
     );
