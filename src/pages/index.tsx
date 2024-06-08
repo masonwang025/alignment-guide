@@ -25,7 +25,7 @@ export default function Index() {
                 {/* ——————— SECTION 1 ——————— */}
                 <Section id='1' className='space-between center-h'>
                     <div />
-                    <div className='w-3/4 md:w-1/2 text-center center-h'>
+                    <div className='w-3/4 px-2 md:w-1/2 text-center center-h'>
                         <TypeAnimation sequence={['AI smarter than us will be our ', () => setPhraseComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center' />
                         {phraseComplete && <TypeAnimation sequence={['last invention.', 500, () => setTypingComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center italic' />}
                     </div>
@@ -82,7 +82,7 @@ export default function Index() {
                             </div>
                             <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
                                 <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>04</span>
-                                <div className='sm:text-2xl md:text-3xl text-xl'>Concrete next steps</div>
+                                <div className='sm:text-2xl md:text-3xl text-xl'>Next steps</div>
                             </div>
                         </div>
 
