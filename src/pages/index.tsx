@@ -63,9 +63,10 @@ export default function Index() {
 
                 {/* ——————— SECTION 3 ——————— */}
                 <Section id='3' className='space-between' fullWidth fullHeight>
+                    <div />
                     <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
                         <div className='border border-gray-300 rounded-lg p-5 spacing-y-5'>
-                            <h1 className='font-serif md:text-4xl text-3xl text-center'>Introduction</h1>
+                            <h1 className='font-serif md:text-4xl text-3xl text-center mb-2'>Introduction</h1>
                             <p className='text-lg text-center pb-5'>What we think you should read or do first</p>
                             <div className='flex flex-col items-center justify-center space-y-5'>
                                 <Link href='/introduction'>
@@ -76,7 +77,6 @@ export default function Index() {
                             </div>
                         </div>
                     </div>
-
                     <Footer />
                 </Section>
             </div>
