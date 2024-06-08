@@ -1,12 +1,10 @@
-import Promise from "@/components/elements/Promise";
-import Toggle from "@/components/elements/Toggle";
-import LinkBadge from "@/components/elements/LinkBadge";
+import Promise from '@/components/elements/Promise';
+import Toggle from '@/components/elements/Toggle';
+import LinkBadge from '@/components/elements/LinkBadge';
 
 # Why Superintelligent AI is Dangerous by Default
 
-<Promise>
-    After reading this, you will understand why superintelligent AI can and will be dangerous by default.
-</Promise>
+<Promise>After reading this, you will understand why superintelligent AI can and will be dangerous by default.</Promise>
 
 > “The principal reason for humanity’s dominant position on Earth is that our brains have a slightly expanded set of faculties compared with other animals.” - Nick Bostrom
 
@@ -26,34 +24,52 @@ _Okay, even if that’s true, how would a chatbot take over the world?_
 
 ## How would an AI actually gain or wield power if it exists only as a computer program?
 
-<Toggle title={<div><p>A computer program doesn't actually serve as a constraint for any generally intelligent agent.</p>
-    <p className="mt-3">Through the digital world alone, even humans (not to mention a a superintelligent AI) can strategically manipulate people, hack into technology, engineer new devices, and amass financial resources to achieve its goals.</p></div>}>
-To illustrate, here is one way this could happen (although there are many others):
-1. Humans develop an AI system that becomes more intelligent over time, mainly with human intervention responsible for capability improvements.
-2. After sufficient improvement, the AI system eventually understands the world well enough that it can improve its own design.
-3. The AI system covertly develops long-term goals and realizes it does not need to act truthfully around humans.
-4. The AI system gains access to the physical world, either by gaining access to the Internet, hacking into robots, or blackmailing humans to carry out actions on its behalf.
-5. The AI system finally implements its long-term plan, optimizing its current objectives, which may differ from its original human-specified objectives.
+<Toggle
+    title={
+        <div>
+            <p>A computer program doesn't actually serve as a constraint for any generally intelligent agent.</p>
+            <p className='mt-3'>
+                Through the digital world alone, even humans (not to mention a a superintelligent AI) can strategically manipulate people, hack into technology, engineer new devices, and amass financial resources to achieve its
+                goals.
+            </p>
+        </div>
+    }
+>
+    To illustrate, here is one way this could happen (although there are many others): 1. Humans develop an AI system that becomes more intelligent over time, mainly with human intervention responsible for capability improvements.
+    2. After sufficient improvement, the AI system eventually understands the world well enough that it can improve its own design. 3. The AI system covertly develops long-term goals and realizes it does not need to act truthfully
+    around humans. 4. The AI system gains access to the physical world, either by gaining access to the Internet, hacking into robots, or blackmailing humans to carry out actions on its behalf. 5. The AI system finally implements
+    its long-term plan, optimizing its current objectives, which may differ from its original human-specified objectives.
 </Toggle>
 
 _But why should we expect it to use its power to the detriment of humankind?_
 
 ## Wouldn’t a superintelligent AI be smart enough to use its power responsibly?
 
-In short, **no**. An AI system will use its power in a way to maximize its goals *regardless of the nature of its goals* (and as we’ve seen, it is difficult to choose good goals). <b className="bg-highlight">A superintelligent AI would simply be better at doing so.</b>
+In short, **no**. An AI system will use its power in a way to maximize its goals _regardless of the nature of its goals_ (and as we’ve seen, it is difficult to choose good goals). <b className="highlight">A superintelligent AI would simply be better at doing so.</b>
 
-<Toggle title={<div>More generally, the <b>orthogonality thesis</b> asserts that <i>any</i> level of intelligence can be combined with <i>any</i> final goal.</div>}>
-  - Classic example: paperclip maximization.
-    - Let's say aliens came to Earth and offered us 1 million dollars every time we made a paperclip.
-    - Despite the fact our intelligence is far more than the minimum intelligence necessary to make paperclips, almost everyone on Earth would immediately start making paperclips.
+<Toggle
+    title={
+        <div>
+            More generally, the <b>orthogonality thesis</b> asserts that <i>any</i> level of intelligence can be combined with <i>any</i> final goal.
+        </div>
+    }
+>
+    - Classic example: paperclip maximization. - Let's say aliens came to Earth and offered us 1 million dollars every time we made a paperclip. - Despite the fact our intelligence is far more than the minimum intelligence
+    necessary to make paperclips, almost everyone on Earth would immediately start making paperclips.
 </Toggle>
 This means that even if the AI system were many times more intelligent than humans, this would guarantee absolutely nothing about its final goals.
 
 Moreover, even if the AI system’s final goals seem safe, it is likely that it will share a lot of _intermediate_ goals in common with a misaligned superintelligence.
 
-<Toggle title={<div>These goals are known as <b>convergent instrumental goals</b>, i.e. intermediate goals or strategies that are useful in pursuing (almost) any final goal.</div>}>
-  - For example, even if an AI agent’s final goal has nothing to do with self-preservation, self-preservation is likely necessary for achieving its final goal, and hence almost any agent will assume self-preservation as one of its intermediate goals.
-  - Other convergent instrumental goals include goal-content integrity, cognitive enhancement, and resource acquisition (cite Bostrom).
+<Toggle
+    title={
+        <div>
+            These goals are known as <b>convergent instrumental goals</b>, i.e. intermediate goals or strategies that are useful in pursuing (almost) any final goal.
+        </div>
+    }
+>
+    - For example, even if an AI agent’s final goal has nothing to do with self-preservation, self-preservation is likely necessary for achieving its final goal, and hence almost any agent will assume self-preservation as one of
+    its intermediate goals. - Other convergent instrumental goals include goal-content integrity, cognitive enhancement, and resource acquisition (cite Bostrom).
 </Toggle>
 
 Hence, it is not enough to align an AI system's final goals alone; we must also align its intermediate goals, which by default will be identical to those of a misaligned system.

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,118 +6,124 @@
 
 /* —————————————— TAILWIND STYLES —————————————— */
 
+@layer base {
+    .highlight {
+        @apply bg-highlight rounded-[.25rem];
+    }
+}
+
 @layer components {
-  .debug {
-    @apply border border-red-500;
-  }
+    .debug {
+        @apply border border-red-500;
+    }
 
-  .horizontal {
-    @apply flex flex-row;
-  }
+    .horizontal {
+        @apply flex flex-row;
+    }
 
-  .vertical {
-    @apply flex flex-col;
-  }
+    .vertical {
+        @apply flex flex-col;
+    }
 
-  .horizontal.center-v {
-    @apply items-center;
-  }
+    .horizontal.center-v {
+        @apply items-center;
+    }
 
-  .horizontal.center-h {
-    @apply justify-center;
-  }
+    .horizontal.center-h {
+        @apply justify-center;
+    }
 
-  .horizontal.center {
-    @apply justify-center items-center;
-  }
+    .horizontal.center {
+        @apply justify-center items-center;
+    }
 
-  .vertical.center-v {
-    @apply justify-center;
-  }
+    .vertical.center-v {
+        @apply justify-center;
+    }
 
-  .vertical.center-h {
-    @apply items-center;
-  }
+    .vertical.center-h {
+        @apply items-center;
+    }
 
-  .vertical.center {
-    @apply justify-center items-center;
-  }
+    .vertical.center {
+        @apply justify-center items-center;
+    }
 
-  .space-between {
-    @apply justify-between;
-  }
+    .space-between {
+        @apply justify-between;
+    }
 }
 
 /* —————————————— NEXTRA STYLES —————————————— */
 
 /* whole site bg color */
 body {
-  @apply bg-background text-black !important;
+    @apply bg-background text-black !important;
 }
 
 /* nav bar bg color */
 .nextra-nav-container {
-  @apply bg-background bg-opacity-0 backdrop-blur-md !important;
+    @apply bg-background bg-opacity-0 backdrop-blur-md !important;
 }
 .nextra-nav-container-blur {
-  @apply bg-background bg-opacity-0 backdrop-blur-md !important;
-  /* --tw-shadow: none !important; */
+    @apply bg-background bg-opacity-0 backdrop-blur-md !important;
+    /* --tw-shadow: none !important; */
 }
 
 /* sidebar active button color */
 .nextra-sidebar-container .nx-bg-primary-100 {
-  @apply bg-accent-400 !important;
+    @apply bg-accent-400 !important;
 }
 
 /* breadcrumb (little text at the top of the page) */
 .nextra-breadcrumb .nx-text-gray-700 {
-  @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
+    @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
 }
 .nextra-breadcrumb {
-  @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
+    @apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
 }
 
 /* TOC bottom bg and shadow color */
 .nextra-toc .nextra-scrollbar .nx-bg-white {
-  @apply bg-background !important;
-  @apply shadow-none !important;
+    @apply bg-background !important;
+    @apply shadow-none !important;
 }
 
 /* search results container (otherwise blur header gets rid of this opacity) */
 .nextra-search .nextra-scrollbar {
-  @apply bg-white !important;
+    @apply bg-white !important;
 }
 
 /* search results highlighted text color */
 .nextra-search .nextra-scrollbar .nx-text-primary-600 {
-  @apply text-[#8B8478] bg-[#F2F2F1] rounded-[.25rem] !important;
-  /* @apply bg-[#E4E4E4] rounded-[.25rem] !important; */
-  /* @apply text-[#B7ADA3] !important; */
+    @apply text-[#8B8478] bg-[#F2F2F1] rounded-[.25rem] !important;
+    /* @apply bg-[#E4E4E4] rounded-[.25rem] !important; */
+    /* @apply text-[#B7ADA3] !important; */
 }
 
 /* border color (to accomodate darker bg) */
 *,
 ::before,
 ::after {
-  @apply border-gray-300 !important;
+    @apply border-gray-300 !important;
 }
 
 /* footer bg color */
 footer {
-  @apply bg-background !important;
+    @apply bg-background !important;
 }
 
 /* default transition */
 .trans {
-  @apply transition-all duration-200 ease-in-out;
+    @apply transition-all duration-200 ease-in-out;
 }
 
 /* TEMPORARY FIX */
 h3 {
-  @apply mt-4;
+    @apply mt-4;
 }
 
 /* smooth scrolling */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }

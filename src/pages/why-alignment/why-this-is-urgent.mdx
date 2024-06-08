@@ -1,14 +1,12 @@
-import Promise from "@/components/elements/Promise";
-import Toggle from "@/components/elements/Toggle";
-import LinkBadge from "@/components/elements/LinkBadge";
+import Promise from '@/components/elements/Promise';
+import Toggle from '@/components/elements/Toggle';
+import LinkBadge from '@/components/elements/LinkBadge';
 
 # Why AI Alignment Work is Urgent
 
-<Promise>
-    After reading this, you will understand why alignment work is urgent and cannot wait until after we have developed Artificial General Intelligence.
-</Promise>
+<Promise>After reading this, you will understand why alignment work is urgent and cannot wait until after we have developed Artificial General Intelligence.</Promise>
 
-1. AGI is [being projected](https://www.dwarkeshpatel.com/p/dario-amodei) for 2029, and <span className="bg-highlight">it’s a realistic prediction.</span>
+1. AGI is [being projected](https://www.dwarkeshpatel.com/p/dario-amodei) for 2029, and <span className="highlight">it’s a realistic prediction.</span>
 
 <Toggle title={<div>While this may seem like an overly optimistic prediction, technological progress happens <b>exponentially</b>.</div>}>
     - We often use the last decade as a benchmark to predict future progress, but this is a *flawed* approach: You need to imagine things progressing at a *much faster rate* than they are now.
@@ -25,29 +23,49 @@ import LinkBadge from "@/components/elements/LinkBadge";
 
 ---
 
-2. AGI has **no reason** to plateau at human-level intelligence. In fact, we believe it would shoot right past it very, very quickly: <span className="bg-highlight">A system more intelligent than all of humanity could emerge within **days or years** after we hit AGI.</span> The **takeoff to superintelligence will be short.**
+2. AGI has **no reason** to plateau at human-level intelligence. In fact, we believe it would shoot right past it very, very quickly: <span className="highlight">A system more intelligent than all of humanity could emerge within **days or years** after we hit AGI.</span> The **takeoff to superintelligence will be short.**
 
-   <Toggle title={<div>Firstly, we are <i>not</i> the upper bound of intelligence.</div>}>
-        - Human intelligence is fundamentally limited by our biological constraints. For example, we have hard bounds like neuron firing rates and brain size.
-        - In contrast, AGI will **not** have such size bounds and will **not** be restricted to the types of algorithms implementable in the human brain.
+    <Toggle
+        title={
+            <div>
+                Firstly, we are <i>not</i> the upper bound of intelligence.
+            </div>
+        }
+    >
+        - Human intelligence is fundamentally limited by our biological constraints. For example, we have hard bounds like neuron firing rates and brain size. - In contrast, AGI will **not** have such size bounds and will **not**
+        be restricted to the types of algorithms implementable in the human brain.
     </Toggle>
 
-   <Toggle title={<div>Secondly, when this surpassing occurs, it is likely to be <i>explosive</i>.</div>}>
-        - **Software-level**: An artificial general intelligence will eventually have the capability to self-improve autonomously, leading to an exponential increase in the types of algorithms it will be able to learn and implement.
-        - **Hardware-level**: Bostrom suggests that significant computational resources *already exist* that are underutilized. When an AI can leverage this existing hardware effectively, it will instantly and dramatically increase its intelligence.
+    <Toggle
+        title={
+            <div>
+                Secondly, when this surpassing occurs, it is likely to be <i>explosive</i>.
+            </div>
+        }
+    >
+        - **Software-level**: An artificial general intelligence will eventually have the capability to self-improve autonomously, leading to an exponential increase in the types of algorithms it will be able to learn and
+        implement. - **Hardware-level**: Bostrom suggests that significant computational resources *already exist* that are underutilized. When an AI can leverage this existing hardware effectively, it will instantly and
+        dramatically increase its intelligence.
     </Toggle>
 
 ---
 
-3. <span className="bg-highlight">We have **one chance** to solve AI alignment.</span> Once a misaligned AGI exists, our fate would be sealed.
-   <Toggle title={<div>Sufficiently intelligent AI systems will possess <strong>instrumental convergent goals</strong> (<LinkBadge text="Why is alignment difficult?" link="/why-alignment/why-alignment-is-difficult" />), for example <em>goal preservation</em> and <em>self-preservation</em>, which lead to AI drives that are default harmful.</div>}>
-     - **Goal preservation**: An AI system will recognize actions that would increase the likelihood of committing actions antithetical to its goals.
-       For example, if Gandhi, a pacifist, possessed a pill that would make him want to kill people, he would not take the pill. Similarly, an AI will avoid actions that could compromise its original objectives, even if those objectives are no longer ideal.
-     - **Self-preservation**: An AI system will recognize actions that, if undertaken, would increase the likelihood of endangering its existence.
-       For example, if the AI knew that a certain action would lead to it being "turned off," it will deceive humans to prevent this, as it cannot achieve its objectives if it is no longer operational.
+3. <span className='highlight'>We have **one chance** to solve AI alignment.</span> Once a misaligned AGI exists, our fate would be sealed.
+   <Toggle
+       title={
+           <div>
+               Sufficiently intelligent AI systems will possess <strong>instrumental convergent goals</strong> (<LinkBadge text='Why is alignment difficult?' link='/why-alignment/why-alignment-is-difficult' />
+               ), for example <em>goal preservation</em> and <em>self-preservation</em>, which lead to AI drives that are default harmful.
+           </div>
+       }
+   >
+       - **Goal preservation**: An AI system will recognize actions that would increase the likelihood of committing actions antithetical to its goals. For example, if Gandhi, a pacifist, possessed a pill that would make him want
+       to kill people, he would not take the pill. Similarly, an AI will avoid actions that could compromise its original objectives, even if those objectives are no longer ideal. - **Self-preservation**: An AI system will
+       recognize actions that, if undertaken, would increase the likelihood of endangering its existence. For example, if the AI knew that a certain action would lead to it being "turned off," it will deceive humans to prevent
+       this, as it cannot achieve its objectives if it is no longer operational.
    </Toggle>
-   
-   - This problem is even harder because it’s not enough to create an aligned AGI. We must **create an aligned AGI that prevents other unaligned AGI from being created.** I.e. we will need to build an AI system capable of contributing a **weak pivotal act.**
-     - Otherwise, an unaligned AGI will eventually be developed, and we are back to square one with a misaligned system that can potentially undermine or even negate the positive outcomes ensured by the aligned AGI.
-   - Once a highly capable AGI operates at a dangerous level, any misalignment will lead to catastrophic, irreversible consequences. In particular, if the initial AGI system we develop is misaligned, any subsequent AI systems **will also be misaligned**.
-   - AI alignment is _not impossible in principle_. For example, if we had a textbook from one hundred years in the future containing all the ideas that actually work, we could probably build an aligned superintelligence in six months. The real difficulty is more so that we only have one chance to get it right.
+
+    - This problem is even harder because it’s not enough to create an aligned AGI. We must **create an aligned AGI that prevents other unaligned AGI from being created.** I.e. we will need to build an AI system capable of contributing a **weak pivotal act.**
+        - Otherwise, an unaligned AGI will eventually be developed, and we are back to square one with a misaligned system that can potentially undermine or even negate the positive outcomes ensured by the aligned AGI.
+    - Once a highly capable AGI operates at a dangerous level, any misalignment will lead to catastrophic, irreversible consequences. In particular, if the initial AGI system we develop is misaligned, any subsequent AI systems **will also be misaligned**.
+    - AI alignment is _not impossible in principle_. For example, if we had a textbook from one hundred years in the future containing all the ideas that actually work, we could probably build an aligned superintelligence in six months. The real difficulty is more so that we only have one chance to get it right.

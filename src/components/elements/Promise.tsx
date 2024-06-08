@@ -1,14 +1,10 @@
 import React from 'react';
 
-const Promise: React.FC = ({ children, icon = '💡' }: { children: React.ReactNode, icon: string }) => {
+const Promise: React.FC = ({ children, icon = '💡' }: { children: React.ReactNode; icon: string }) => {
     return (
-        <div className="flex items-center p-4 bg-gray-100 rounded-md border border-gray-300">
-            <div className="mr-4 text-2xl">
-                {icon}
-            </div>
-            <div className="text-gray-800">
-                {children}
-            </div>
+        <div className='flex p-4 bg-accent-400 rounded-xl'>
+            <div className='mr-4 text-2xl'>{icon}</div>
+            <div className='min-h-3 self-center space-y-2'>{children}</div>
         </div>
     );
 };

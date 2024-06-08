@@ -1,6 +1,6 @@
-import Promise from "@/components/elements/Promise";
-import Toggle from "@/components/elements/Toggle";
-import LinkBadge from "@/components/elements/LinkBadge";
+import Promise from '@/components/elements/Promise';
+import Toggle from '@/components/elements/Toggle';
+import LinkBadge from '@/components/elements/LinkBadge';
 
 # Why is alignment difficult?
 
@@ -17,7 +17,7 @@ In the previous page, we defined AI alignment as the problem of ensuring that a 
 
 _Wait, why is that difficult?_
 
-<Toggle title={<div class="bg-highlight font-bold">Because it’s difficult to choose good goals.</div>}>
+<Toggle title={<div class="highlight font-bold">Because it’s difficult to choose good goals.</div>}>
     1. Picking objectives is surprisingly hard.
     2. The strategy that maximizes the objectives is **probably not what you aim for** ([list of examples](https://arc.net/l/quote/eftxikyd) in gaming agents).
         - E.g., an [OpenAI agent](https://openai.com/index/faulty-reward-functions/) trained in a boat racing game maximizes its score by repeatedly drifting around in the same circle (crashing into other boats, catching on fire, and going the wrong way).
@@ -25,13 +25,14 @@ _Wait, why is that difficult?_
             And it achieves a score on average 20 percent higher than that achieved by human players.
 
     3. We have problems specifying simple goals in even simple games, and this is the default. It only gets more difficult as we begin thinking about the real world.
+
 </Toggle>
 
 ## Getting an AI to make you a cup of tea
 
 1. You want your AI to get you a cup of tea. You specify this as its goal.
 2. But there’s a vase in the way, and the robot plows through it. This is because it only cares about one variable: the cup of tea.
-3. So you turn it off, modify it, and it cares about the vase. <b class="bg-highlight">But there is always another thing.</b>
+3. So you turn it off, modify it, and it cares about the vase. <b class="highlight">But there is always another thing.</b>
 4. Now, it values the vase and realizes a human is in the environment that may move around and knock over it. So it determines that it’s best to kill the human then.
 
 ---
@@ -46,9 +47,15 @@ _Wait, why is that difficult?_
     >
 </Toggle>
 
-<Toggle title={<div>But that scenario is unrealistic in many ways. One important way is that you wouldn’t be able to <b className="bg-highlight">“turn it off.”</b></div>}>
-    - Turning it off will prevent it from achieving its objective.
-    - It will fight you and, even worse, deceive you (e.g., behave until it’s in a position where you can’t turn it off, and then go after its actual objective of the tea).
+<Toggle
+    title={
+        <div>
+            But that scenario is unrealistic in many ways. One important way is that you wouldn’t be able to <b className='highlight'>“turn it off.”</b>
+        </div>
+    }
+>
+    - Turning it off will prevent it from achieving its objective. - It will fight you and, even worse, deceive you (e.g., behave until it’s in a position where you can’t turn it off, and then go after its actual objective of the
+    tea).
 </Toggle>
 
 This is a **convergent instrumental goal** (it doesn’t matter what the end goal is), as are self-preservation, goal preservation, resource acquisition, and self-improvement. Thus, **Artificial General Intelligence is dangerous by default.** (More in [Superintelligence: default dangerous](https://www.notion.so/Superintelligence-default-dangerous-9ef0d11a444845eda56b09077b781547?pvs=21).)
@@ -60,6 +67,7 @@ Models like GPT-4 can’t take over the world but are still **misaligned** (they
 <Toggle title={<div>This is concerning because we are tasked with aligning something far more intelligent than us when we cannot properly align far weaker AI.</div>}>
 
 ### Elon Musk vs. babies
+
 Here’s a way to think about this problem: say you gave the goal of “acquire/create as many paperclips as possible” to a baby. The baby may knock over some items on your table to gather a few paper clips, which isn’t horrible.
 
 Now, imagine you gave that same goal to Elon Musk. If that became his sole purpose, he could cause significant damage to the world in his pursuit.

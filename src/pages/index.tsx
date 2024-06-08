@@ -11,6 +11,7 @@ import ChevronDown from '../assets/icons/chevron-down.svg';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 
 export default function Index() {
+    const [phraseComplete, setPhraseComplete] = useState(false);
     const [typingComplete, setTypingComplete] = useState(false);
 
     const handleScroll = (targetId) => {
@@ -23,9 +24,13 @@ export default function Index() {
             <Cursor />
             <div className='snap-y overflow-y-scroll w-screen h-screen scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
-                <Section id='1' className='space-between' fitWindow>
+                <Section id='1' className='space-between center-h' fitWindow>
                     <div />
-                    <TypeAnimation sequence={['AI smarter than us will be our last invention.', 500, () => setTypingComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center' />
+                    <div className='w-1/2 text-center center-h'>
+                        <TypeAnimation sequence={['AI smarter than us will be our ', () => setPhraseComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center' />
+                        {phraseComplete && <TypeAnimation sequence={['last invention.', 500, () => setTypingComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center italic' />}
+                    </div>
+
                     {typingComplete ? (
                         <motion.div className='flex flex-col vertical center-h' onClick={() => handleScroll('2')} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
                             <p className='text-lg pb-5 text-center'>So what?</p>
@@ -43,7 +48,7 @@ export default function Index() {
                     <div />
                     <div className='flex flex-col vertical center-h space-y-10'>
                         <h1 className='font-serif md:text-3xl text-2xl text-center'>
-                            As AI nears and surpasses human-level intelligence, the fate of our species will depend on its actions. So we must figure out how to align it with humanity’s goals.
+                            As AI nears and surpasses human-level intelligence, the fate of our species will depend on its actions. <span className='italic'>So we must figure out how to align it with humanity’s goals.</span>
                         </h1>
                         <Image src={separator} alt='seperator' width={20} height={20} />
                         <h1 className='font-serif md:text-3xl text-2xl text-center'>Most people don’t know what AI alignment is, why it’s important, or what you can do to contribute.</h1>
@@ -130,8 +135,8 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className='border border-gray-300 rounded-lg p-5'>
-                            <h1 className='font-serif md:text-4xl text-3xl text-center pb-2'>Quickstart</h1>
+                        <div className='border border-gray-300 rounded-lg p-5 spacing-y-5'>
+                            <h1 className='font-serif md:text-4xl text-3xl text-center'>Quickstart</h1>
                             <p className='text-lg text-center pb-5'>What we think you should read or do first</p>
                             <div className='flex flex-col items-center justify-center space-y-5'>
                                 <Link href='/quickstart'>
