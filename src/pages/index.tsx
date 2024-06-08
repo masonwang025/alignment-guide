@@ -66,27 +66,27 @@ export default function Index() {
                     <div />
                     {/* hacky borders? */}
                     {/* todo: modularize to reuse components */}
-                    <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
+                    <div className='md:px-26 sm:px-20 px-2 space-y-20 pt-5'>
                         <div className='md:px-26 sm:px-20 px-14 space-y-20 pt-5'>
                             <div className='flex flex-col lg:flex-row lg:border-b-0 text-center font-serif text-2xl xl:text-3xl'>
                                 <div className='lg:w-1/2 lg:border-r'>
-                                    <div className='p-4 border-b'>
+                                    <div className='p-4 border-b space-y-2'>
                                         <span className='italic text-gray-700 text-xl lg:text-2xl'>01</span>
-                                        <h2>Why alignment urgently matters</h2>
+                                        <div className='font-serif text-3xl'>Why alignment urgently matters</div>
                                     </div>
-                                    <div className='p-4 border-b lg:border-b-0'>
+                                    <div className='p-4 border-b lg:border-b-0 space-y-2'>
                                         <span className='italic text-gray-700 text-xl lg:text-2xl'>02</span>
-                                        <h2>Overview of current efforts</h2>
+                                        <div className='font-serif text-3xl'>Overview of current efforts</div>
                                     </div>
                                 </div>
                                 <div className='lg:w-1/2 border-b-0'>
-                                    <div className='p-4 border-b lg:border-b-0'>
+                                    <div className='p-4 border-b lg:border-b-0 space-y-2'>
                                         <span className='italic text-gray-700 text-xl lg:text-2xl'>03</span>
-                                        <h2>Research Directions</h2>
+                                        <div className='font-serif text-3xl'>Research directions</div>
                                     </div>
-                                    <div className='p-4 lg:border-t lg:'>
+                                    <div className='p-4 lg:border-t space-y-2'>
                                         <span className='italic text-gray-700 text-xl lg:text-2xl'>04</span>
-                                        <h2>Concrete Next Steps</h2>
+                                        <div className='font-serif text-3xl'>Concrete next steps</div>
                                     </div>
                                 </div>
                             </div>
