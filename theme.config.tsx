@@ -49,7 +49,7 @@ const config: CustomDocsThemeConfig = {
         h4: ({ children }) => <TextWrapper type='h4'>{children}</TextWrapper>,
         h5: ({ children }) => <TextWrapper type='h5'>{children}</TextWrapper>,
         h6: ({ children }) => <TextWrapper type='h6'>{children}</TextWrapper>,
-        // p: ({ children }) => <TextWrapper type='p'>{children}</TextWrapper>,
+        p: ({ children }) => <TextWrapper type='p'>{children}</TextWrapper>,
         a: ({ href, children }) => <LinkWrapper href={href}>{children}</LinkWrapper>,
     },
     toc: {

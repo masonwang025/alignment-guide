@@ -12,7 +12,7 @@ const headingClasses = {
     h4: 'font-serif text-xl text-dark',
     h5: 'font-serif text-lg text-dark',
     h6: 'font-serif text-base text-dark',
-    p: 'font-sans text-base',
+    p: 'font-sans text-base mt-3 nx-leading-7 first:nx-mt-0',
 };
 
 const TextHeaderWrapper: FC<TextHeaderWrapperProps> = ({ children, type }) => {

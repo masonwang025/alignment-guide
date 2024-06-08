@@ -27,19 +27,19 @@ function Values() {
             <div className='space-y-5'>
                 <h1 className='text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] pb-2'>So what are we doing here?</h1>
                 <Value iconComponent={<span className='font-bold mr-2'>1.</span>}>
-                    <p>We believe the development of AGI is the most important technology humans will ever create (and likely the last one too), and it is fundamental that it proceeds safely and correctly.</p>
+                    <p>We believe the development of <b>AGI is the most important technology</b> humans will ever create (and likely the last one too), and it is fundamental that it proceeds safely and correctly.</p>
                 </Value>
 
                 <Value iconComponent={<span className='font-bold mr-2'>2.</span>}>
                     <div className='space-y-2'>
-                        <p>AGI Alignment, like the development of AGI itself, is a challenging technical problem.</p>
+                        <p>AGI Alignment, like the development of AGI itself, is a <b>challenging <i>technical</i> problem</b>.</p>
                         <p>While fields such as philosophy and politics are vital for validating and ensuring the adoption of solutions, alignment remains a technical issue requiring a technical approach.</p>
                     </div>
                 </Value>
 
                 <Value iconComponent={<span className='font-bold mr-2'>3.</span>}>
                     <div className='space-y-2'>
-                        <p>Alignment is a solvable problem, but also an urgent one. </p>
+                        <p>Alignment is a <b>solvable problem, but also an urgent one</b>. </p>
                         <p>
                             Leading AI companies predict AGI by 2029, and we need to solve alignment beforehand since we won't get another chance afterward. We have one critical try to get it right—unlike a mere
                             segmentation fault, misaligned AGI could have catastrophic consequences.
