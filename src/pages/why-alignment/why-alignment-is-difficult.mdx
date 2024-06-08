@@ -17,7 +17,7 @@ In the previous page, we defined AI alignment as the problem of ensuring that a 
 
 _Wait, why is that difficult?_
 
-<Toggle title={<div class="highlight font-bold">Because it’s difficult to choose good goals.</div>}>
+<Toggle title={<div class="font-bold">Because it’s difficult to choose good goals.</div>}>
     1. Picking objectives is surprisingly hard.
     2. The strategy that maximizes the objectives is **probably not what you aim for** ([list of examples](https://arc.net/l/quote/eftxikyd) in gaming agents).
         - E.g., an [OpenAI agent](https://openai.com/index/faulty-reward-functions/) trained in a boat racing game maximizes its score by repeatedly drifting around in the same circle (crashing into other boats, catching on fire, and going the wrong way).
@@ -32,7 +32,7 @@ _Wait, why is that difficult?_
 
 1. You want your AI to get you a cup of tea. You specify this as its goal.
 2. But there’s a vase in the way, and the robot plows through it. This is because it only cares about one variable: the cup of tea.
-3. So you turn it off, modify it, and it cares about the vase. <b class="highlight">But there is always another thing.</b>
+3. So you turn it off, modify it, and it cares about the vase. <b class="font-bold">But there is always another thing.</b>
 4. Now, it values the vase and realizes a human is in the environment that may move around and knock over it. So it determines that it’s best to kill the human then.
 
 ---
@@ -41,7 +41,7 @@ _Wait, why is that difficult?_
     
     If you have a sufficiently powerful agent and manage to come up with a really good objective that cares about the top 20 things humans value, **the 21st thing that humans value will be gone forever**.
     
-    More specifically, an agent that only cares about a subset of the variables in a system will be willing to trade off <span class="text-highlight-dark">arbitrarily large amounts</span> of any variables that *aren’t* part of its goal for <span class="text-highlight-dark">arbitrarily tiny increases</span> in any of the things that *are* in its goal.
+    More specifically, an agent that only cares about a subset of the variables in a system will be willing to trade off <span class="text-font-bold-dark">arbitrarily large amounts</span> of any variables that *aren’t* part of its goal for <span class="text-font-bold-dark">arbitrarily tiny increases</span> in any of the things that *are* in its goal.
     
     >“A system that is optimizing a function of *n* variables, where the objective depends on subset of size *k\<n*, will often set the remaining unconstrained variables to extreme values. If one of those unconstrained variables is something we care about, the solution found may be *highly undesirable*.” - Stuart Russell
     >
@@ -50,7 +50,7 @@ _Wait, why is that difficult?_
 <Toggle
     title={
         <div>
-            But that scenario is unrealistic in many ways. One important way is that you wouldn’t be able to <b className='highlight'>“turn it off.”</b>
+            But that scenario is unrealistic in many ways. One important way is that you wouldn’t be able to <b className='font-bold'>“turn it off.”</b>
         </div>
     }
 >
