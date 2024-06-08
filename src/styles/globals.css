@@ -133,25 +133,25 @@ html {
 }
 
 h1 {
-    @apply font-serif text-5xl mt-5 !mb-7 text-dark !font-normal;
+    @apply !font-serif !text-5xl !mt-5 !mb-7 !text-dark !font-normal;
 }
 
 h2 {
-    @apply font-serif text-3xl mt-7 !mb-7 pb-2 border-b border-gray-300 text-dark !font-normal;
+    @apply !font-serif !text-3xl !mt-7 !mb-7 !pb-2 !border-b border-gray-300 text-dark !font-normal;
 }
 
 h3 {
-    @apply font-serif text-2xl text-dark !font-normal;
+    @apply !font-serif !text-2xl text-dark !font-normal;
 }
 
 h4 {
-    @apply font-serif text-xl text-dark !font-normal;
+    @apply !font-serif !text-xl text-dark !font-normal;
 }
 
 h5 {
-    @apply font-serif text-lg text-dark !font-normal;
+    @apply !font-serif !text-lg text-dark !font-normal;
 }
 
 h6 {
-    @apply font-serif text-base text-dark !font-normal;
+    @apply !font-serif !text-base text-dark !font-normal;
 }
