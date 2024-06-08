@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -9,6 +9,7 @@ import Footer from '../components/global/Footer';
 import separator from '../assets/separator.svg';
 import ChevronDown from '../assets/icons/chevron-down.svg';
 import { XMarkIcon } from '@heroicons/react/24/solid';
+import useScrollSnap from "react-use-scroll-snap"
 
 export default function Index() {
     const [phraseComplete, setPhraseComplete] = useState(false);
@@ -19,10 +20,13 @@ export default function Index() {
         targetElement?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const scrollRef = useRef(null);
+    useScrollSnap({ ref: scrollRef, duration: 50 });
+
     return (
-        <div className='custom-cursor'>
+        <div className='custom-cursor' ref={scrollRef}>
             <Cursor />
-            <div className='snap-y overflow-y-scroll w-screen h-screen scroll-smooth'>
+            <div className='overflow-y-scroll w-screen h-screen scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
                 <Section id='1' className='space-between center-h' fitWindow>
                     <div />
@@ -32,7 +36,7 @@ export default function Index() {
                     </div>
 
                     {typingComplete ? (
-                        <motion.div className='flex flex-col vertical center-h' onClick={() => handleScroll('2')} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
+                        <motion.div className='flex flex-col vertical center-h mb-24 md:mb-0' onClick={() => handleScroll('2')} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
                             <p className='text-lg pb-5 text-center'>So what?</p>
                             <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
                                 <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
@@ -54,7 +58,7 @@ export default function Index() {
                         <h1 className='font-serif md:text-3xl text-2xl text-center'>Most people don’t know what AI alignment is, why it’s important, or what you can do to contribute.</h1>
                     </div>
 
-                    <div className='flex flex-col vertical center-h' onClick={() => handleScroll('3')}>
+                    <div className='flex flex-col vertical center-h  mb-24 md:mb-0' onClick={() => handleScroll('3')}>
                         <p className='text-lg pb-5 text-center'>Here's a guide to get started</p>
                         <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
                             <Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
