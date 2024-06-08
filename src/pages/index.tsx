@@ -21,7 +21,7 @@ export default function Index() {
     return (
         <div className='custom-cursor'>
             <Cursor />
-            <div className='snap-y snap-mandatory overflow-y-scroll w-screen scroll-smooth' style={{ height: '100vh' }}>
+            <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-[calc(100dvh)] scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
                 <Section id='1' className='space-between center-h'>
                     <div />

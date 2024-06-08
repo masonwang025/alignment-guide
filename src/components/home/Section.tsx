@@ -6,7 +6,7 @@ const Section = ({ id, children, className, fullWidth, fullHeight }: { id: strin
     const py = fullHeight ? 'py-0' : 'py-10 pb-24 md:pb-16';
 
     return (
-        <motion.section id={id} className={`snap-start flex flex-col vertical w-screen ${px} ${py} ${className}`} style={{ height: '100vh' }}>
+        <motion.section id={id} className={`snap-start flex flex-col vertical w-screen h-[calc(100dvh)] ${px} ${py} ${className}`}>
             {children}
         </motion.section>
     );
