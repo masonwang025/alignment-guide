@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -8,26 +8,53 @@ import Section from '../components/home/Section';
 import Footer from '../components/global/Footer';
 import separator from '../assets/separator.svg';
 import ChevronDown from '../assets/icons/chevron-down.svg';
+import ParticlesBackground from '../components/home/ParticlesBackground';
 
 export default function Index() {
     const [phraseComplete, setPhraseComplete] = useState(false);
     const [typingComplete, setTypingComplete] = useState(false);
+    const [particlesVisible, setParticlesVisible] = useState(true);
 
     const handleScroll = (targetId) => {
         const targetElement = document.getElementById(targetId);
         targetElement?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const handleScrollEvent = () => {
+        const section2 = document.getElementById('2');
+        const section3 = document.getElementById('3');
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        if (section2 && section3) {
+            const section2Top = section2.offsetTop;
+            const section3Top = section3.offsetTop;
+
+            if (scrollPosition >= section2Top) {
+                setParticlesVisible(false);
+            } else {
+                setParticlesVisible(true);
+            }
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScrollEvent);
+        return () => {
+            window.removeEventListener('scroll', handleScrollEvent);
+        };
+    }, []);
+
     return (
         <div className='custom-cursor'>
             <Cursor />
+            <ParticlesBackground visible={particlesVisible} />
             <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-[calc(100dvh)] scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
                 <Section id='1' className='space-between center-h'>
                     <div />
-                    <div className='w-3/4 px-2 md:w-1/2 text-center center-h'>
-                        <TypeAnimation sequence={['AI smarter than us will be our ', () => setPhraseComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center' />
-                        {phraseComplete && <TypeAnimation sequence={['last invention.', 500, () => setTypingComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif sm:text-5xl text-4xl text-center italic' />}
+                    <div className='relative w-3/4 px-2 md:w-1/2 text-center mx-auto'>
+                        <TypeAnimation sequence={['AI smarter than us will be our ', () => setPhraseComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif text-4xl sm:text-5xl' />
+                        {phraseComplete && <TypeAnimation sequence={['last invention.', 500, () => setTypingComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif text-4xl sm:text-5xl italic' />}
                     </div>
 
                     {typingComplete ? (
@@ -64,23 +91,21 @@ export default function Index() {
                 {/* ——————— SECTION 3 ——————— */}
                 <Section id='3' className='space-between' fullWidth fullHeight>
                     <div />
-                    {/* todo: modularize to reuse components */}
-                    {/* TODO: not to fret, still need to add borders */}
                     <div className='lg:px-24 md:px-36 sm:px-32 px-16 sm:space-y-20 space-y-10 pt-5'>
                         <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-0 items-center'>
-                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-r'>
+                            <div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-r'>
                                 <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>01</span>
                                 <div className='sm:text-2xl md:text-3xl text-xl'>Why alignment urgently matters</div>
                             </div>
-                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl border-b border-gray-300'>
+                            <div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-gray-300'>
                                 <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>02</span>
                                 <div className='sm:text-2xl md:text-3xl text-xl'>Overview of current efforts</div>
                             </div>
-                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-b-0 lg:border-r'>
+                            <div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-b-0 lg:border-r'>
                                 <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>03</span>
                                 <div className='sm:text-2xl md:text-3xl text-xl'>Research directions</div>
                             </div>
-                            <div className='p-4 space-y-2 text-center font-serif xl:text-3xl'>
+                            <div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl'>
                                 <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>04</span>
                                 <div className='sm:text-2xl md:text-3xl text-xl'>Next steps</div>
                             </div>
