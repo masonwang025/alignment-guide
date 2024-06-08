@@ -4,7 +4,7 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadFull } from 'tsparticles';
 import { type Container, type ISourceOptions } from '@tsparticles/engine';
 
-const ParticlesBackground = ({ visible }: { visible?: boolean }) => {
+const ParticlesBackground = () => {
     const [init, setInit] = useState(false);
 
     // this should be run only once per application lifetime
@@ -28,7 +28,7 @@ const ParticlesBackground = ({ visible }: { visible?: boolean }) => {
             },
             particles: {
                 number: {
-                    value: visible ? 250 : 0,
+                    value: 250,
                     density: { enable: true, value_area: 800 },
                 },
                 color: { value: ['#FFFFFF', '#DEDEDE'] },
@@ -56,7 +56,7 @@ const ParticlesBackground = ({ visible }: { visible?: boolean }) => {
             },
             retina_detect: true,
         }),
-        [visible]
+        []
     );
 
     if (init) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -10,47 +10,74 @@ import separator from '../assets/separator.svg';
 import ChevronDown from '../assets/icons/chevron-down.svg';
 import ParticlesBackground from '../components/home/ParticlesBackground';
 
+const useSectionObserver = (setParticlesVisible) => {
+    const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        if (sectionId === '1') {
+                            setParticlesVisible(true);
+                        } else {
+                            setParticlesVisible(false);
+                        }
+                    }
+                });
+            },
+            {
+                threshold: 0.6,
+            }
+        );
+
+        sectionRefs.current.forEach((ref) => {
+            if (ref) observer.observe(ref);
+        });
+
+        return () => {
+            sectionRefs.current.forEach((ref) => {
+                if (ref) observer.unobserve(ref);
+            });
+        };
+    }, [setParticlesVisible]);
+
+    return sectionRefs;
+};
+
 export default function Index() {
     const [phraseComplete, setPhraseComplete] = useState(false);
     const [typingComplete, setTypingComplete] = useState(false);
     const [particlesVisible, setParticlesVisible] = useState(true);
+
+    const sectionRefs = useSectionObserver(setParticlesVisible);
 
     const handleScroll = (targetId) => {
         const targetElement = document.getElementById(targetId);
         targetElement?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const handleScrollEvent = () => {
-        const section2 = document.getElementById('2');
-        const section3 = document.getElementById('3');
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-        if (section2 && section3) {
-            const section2Top = section2.offsetTop;
-            const section3Top = section3.offsetTop;
-
-            if (scrollPosition >= section2Top) {
-                setParticlesVisible(false);
-            } else {
-                setParticlesVisible(true);
-            }
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScrollEvent);
-        return () => {
-            window.removeEventListener('scroll', handleScrollEvent);
-        };
-    }, []);
-
     return (
         <div className='custom-cursor'>
             <Cursor />
-            <ParticlesBackground visible={particlesVisible} />
+            <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: particlesVisible ? 1 : 0, opacity: particlesVisible ? 1 : 0 }}
+                transition={{ duration: 1 }}
+                style={{ position: 'absolute', width: '100%', height: '100%', zIndex: -1000 }}
+            >
+                <ParticlesBackground />
+            </motion.div>
             <div className='snap-y snap-mandatory overflow-y-scroll w-screen h-[calc(100dvh)] scroll-smooth'>
                 {/* ——————— SECTION 1 ——————— */}
-                <Section id='1' className='space-between center-h'>
+                <Section
+                    id='1'
+                    ref={(el) => {
+                        sectionRefs.current[0] = el;
+                    }}
+                    className='space-between center-h'
+                >
                     <div />
                     <div className='relative w-3/4 px-2 md:w-1/2 text-center mx-auto'>
                         <TypeAnimation sequence={['AI smarter than us will be our ', () => setPhraseComplete(true)]} cursor={false} speed={60} repeat={0} className='font-serif text-4xl sm:text-5xl' />
@@ -70,14 +97,20 @@ export default function Index() {
                 </Section>
 
                 {/* ——————— SECTION 2 ——————— */}
-                <Section id='2' className='space-between vertical center-h'>
+                <Section
+                    id='2'
+                    ref={(el) => {
+                        sectionRefs.current[1] = el;
+                    }}
+                    className='space-between vertical center-h'
+                >
                     <div />
                     <div className='flex flex-col vertical center-h space-y-10'>
-                        <h1 className='font-serif md:text-3xl text-2xl text-center'>
+                        <div className='font-serif md:text-3xl text-2xl text-center'>
                             As AI nears and surpasses human-level intelligence, the fate of our species will depend on its actions. <span className='italic'>So we must figure out how to align it with humanity’s goals.</span>
-                        </h1>
+                        </div>
                         <Image src={separator} alt='seperator' width={20} height={20} />
-                        <h1 className='font-serif md:text-3xl text-2xl text-center'>Most people don’t know what AI alignment is, why it’s important, or what you can do to contribute.</h1>
+                        <div className='font-serif md:text-3xl text-2xl text-center'>Most people don’t know what AI alignment is, why it’s important, or what you can do to contribute.</div>
                     </div>
 
                     <div className='flex flex-col vertical center-h' onClick={() => handleScroll('3')}>
@@ -89,7 +122,15 @@ export default function Index() {
                 </Section>
 
                 {/* ——————— SECTION 3 ——————— */}
-                <Section id='3' className='space-between' fullWidth fullHeight>
+                <Section
+                    id='3'
+                    ref={(el) => {
+                        sectionRefs.current[2] = el;
+                    }}
+                    className='space-between'
+                    fullWidth
+                    fullHeight
+                >
                     <div />
                     <div className='lg:px-24 md:px-36 sm:px-32 px-16 sm:space-y-20 space-y-10 pt-5'>
                         <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-0 items-center'>

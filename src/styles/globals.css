@@ -58,7 +58,7 @@
 
 /* whole site bg color */
 body {
-    @apply !bg-background text-black !important;
+    @apply bg-background text-black !important;
 }
 
 /* nav bar bg color */
