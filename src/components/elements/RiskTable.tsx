@@ -2,9 +2,9 @@ import { cn } from '@/utils/shadcn-utils';
 import React from 'react';
 
 const RiskTable = () => {
-    const tableClass = 'table-fixed w-full border-collapse border border-gray-300';
-    const cellClass = 'border border-gray-300 py-2 px-2';
-    const headerClass = `${cellClass} text-lg font-bold`;
+    const tableClass = 'table-auto w-full border-collapse border border-gray-300';
+    const cellClass = 'border border-gray-300 py-2 px-4 md:px-8';
+    const headerClass = `${cellClass} font-bold px-4 md:px-8 text-center`;
     const textCenterClass = `${cellClass} text-center`;
 
     return (
@@ -20,14 +20,14 @@ const RiskTable = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td className={cn(headerClass, 'text-right')}>Accident</td>
+                            <td className={headerClass}>Accident</td>
                             <td className={textCenterClass}>e.g. Self-Driving Car Crashes</td>
                             <td className={cn(textCenterClass, 'bg-highlight')}>
                                 <i>Oh boy</i>
                             </td>
                         </tr>
                         <tr>
-                            <td className={cn(headerClass, 'text-right')}>Misuse</td>
+                            <td className={headerClass}>Misuse</td>
                             <td className={textCenterClass}>e.g. Deep Fakes</td>
                             <td className={textCenterClass}>e.g. AI-Enabled Dictatorship</td>
                         </tr>

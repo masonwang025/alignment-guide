@@ -103,8 +103,9 @@ export default function Index() {
                 >
                     <div />
                     <div className='flex flex-col vertical center-h space-y-10'>
-                        <div className='font-serif sm:text-2xl md:text-3xl text-xl text-center'>
-                            As AI nears and surpasses human-level intelligence, the fate of our species will depend on its actions. <span className='italic'>So we must figure out how to align it with humanity’s goals.</span>
+                        <div className='font-serif sm:text-2xl md:text-3xl text-xl text-center vertical space-y-2'>
+                            <div>As AI nears and surpasses human-level intelligence, the fate of our species will depend on its actions. </div>
+                            <div><span className='italic'>So we must figure out how to steer and control these systems.</span></div>
                         </div>
                         <Image src={separator} alt='seperator' width={20} height={20} />
                         <div className='font-serif sm:text-2xl md:text-3xl text-xl text-center'>Most people don’t know what AI alignment is, why it’s important, or what you can do to contribute.</div>
