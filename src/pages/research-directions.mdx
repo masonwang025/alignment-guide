@@ -1,8 +1,81 @@
 import Promise from '@/components/elements/Promise';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 # Research directions
 <Promise>
-We expand upon the specific technical research directions that are currently being pursued.
+We expand upon the specific technical research directions that prominent organizations are currently pursuing to tackle alignment. 
 
 <div class="font-bold">For each direction, we summarize the current state of the research effort, provide 1 or 2 top resources to learn more, and cover opportunities for future work.</div>
 </Promise>
+
+## The research problem
+
+***How can we steer and control AI systems that are much smarter than us?***
+
+While reinforcement learning from human feedback (RLHF) has been largely successful in aligning today’s models, it won’t reliably scale to AI systems much smarter than us.
+
+We will need new methods and scientific breakthroughs to ensure superhuman AI systems reliably follow their operator’s intent.
+
+## Directions
+<div class="mt-1">
+  <Accordion type="single" collapsible className="w-full">
+    <AccordionItem value="item-1">
+      <AccordionTrigger>
+        **Sparse Autoencoders (SAEs)**
+      </AccordionTrigger>
+      <AccordionContent>
+        1. Many neurons in neural networks respond to mixtures of seemingly unrelated inputs, making interpreting their specific function difficult. Sparse autoencoders provide one solution by explicitly sparsifying activation patterns to make them more human-interpretable. Specifically, an autoencoder is trained on the residual stream within a specified layer of the model, enforcing sparsity in the autoencoder's latent space during training.
+        2. Both [Anthropic](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html) and [OpenAI](https://cdn.openai.com/papers/sparse-autoencoders.pdf) have done work in this area.
+        3. Future work: 
+            - Currently, many sparse autoencoders do not recover the full strength of the model measured in the relative amount of pretraining compute needed to train a model of comparable downstream loss (e.g., in OpenAI’s work, if they substitute their trained SAE into GPT-4, they obtain a model with 10% of the pretraining compute of GPT-4).
+            - While sparse autoencoders are more monosemantic than the original model, improvements are still necessary for the monosemanticity of random activations.
+            - Many explanations of the features in SAEs currently have very high recall but low precision (i.e., they can be overly broad). As learned features become more specific, it will be important to be able to give more precise explanations for features.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+      <AccordionTrigger>
+        **Weak-to-strong generalization (W2SG)**
+      </AccordionTrigger>
+      <AccordionContent>
+        1. In order to align future models, we will need to supervise systems that are more capable than we are. Weak-to-strong generalization studies this idea in the context of having a less capable model supervise a more capable model so that the latent knowledge in the more powerful model can still be extracted. That is, can a smarter model generalize beyond the weak (i.e., noisy) labels provided by a less intelligent supervisor? OpenAI discovered this method and showed that one can use a GPT-2-level model to supervise GPT-4 and elicit capabilities that are on par with GPT-3.5.
+        2. OpenAI’s [blog post](https://openai.com/index/weak-to-strong-generalization/) and [paper](https://cdn.openai.com/papers/weak-to-strong-generalization.pdf) are great resources here.
+        3. Future directions
+            1. There are various disanalogies between current W2SG methods and aligning superintelligent systems, like the fact that it will likely be easier for superintelligent systems to imitate humans than for GPT-4 to imitate GPT-2. 
+            2. Determining exactly which types of properties should (and should not be) satisfied in the desired generalization will be very important.
+            3. Are there types of latent knowledge in more capable models that are easier to extract than others?
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+      <AccordionTrigger>
+        **Sleeper agents**
+      </AccordionTrigger>
+      <AccordionContent>
+           1. At a high level, Anthropic researchers showed that AI systems can exhibit deceptive behavior, such as writing secure code under certain conditions but inserting vulnerabilities under others. They trained models to act safely in all circumstances until a trigger was provided in a prompt (e.g. if the year is 2024), and then found that this deceptive behavior persists even after using state-of-the-art safety training techniques. In fact, adversarial training often made the models better at hiding their deceptive behavior.
+    
+            > “Seeing some confusion like: ‘You trained a model to do Bad Thing, why are you surprised it does Bad Thing?’
+                The point is not that we can train models to do Bad Thing. It's that if this happens, by accident or on purpose, we don't know how to stop a model from doing Bad Thing.” - Jesse Zhu (Anthropic)
+            > 
+        2. Here is the [original paper](https://arxiv.org/abs/2401.05566) and insightful commentary from a separate [blog post](https://thezvi.substack.com/p/on-anthropics-sleeper-agents-paper).
+        3. Future work: 
+            - Develop techniques to identify/mitigate backdoor triggers more effectively.
+            - Improving interpretability tools to analyze LLMs’ internal representations might help better detect/understand deceptive behavior.
+            - Anthropic has already released an update ([Simple probes can catch sleeper agents](https://www.anthropic.com/news/probes-catch-sleeper-agents)) following the original paper.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+
+## Comments
+
+OpenAI, for their [superalignment grants](https://openai.com/index/superalignment-fast-grants/), has published a **[Research directions](https://www.notion.so/Research-directions-0df8dd8136004615b0936bf48eb6aeb8?pvs=21)** page with much more information, covering W2SG, interpretability (mechanistic and top-down), scalable oversight, and other directions.
+
+New researchers have the opportunity to make enormous contributions. The alignment field is a very early one with many tractable research problems and new opportunities. 
+
+> “There has never been a better time to start working on alignment.” - OpenAI
+
