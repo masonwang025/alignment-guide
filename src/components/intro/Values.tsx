@@ -1,16 +1,15 @@
-import { XMarkIcon } from '@heroicons/react/24/solid';
 import Value from './Value';
 
 function Values() {
     return (
         <div className='space-y-5'>
-            <Value iconComponent={<span className='font-bold mr-2'>1.</span>}>
+            <Value iconComponent={<span className='font-serif italic text-2xl mr-2'>01</span>}>
                 <p>
                     We believe the development of <b>AGI is the most important technology</b> humans will ever create (and likely the last one too), and it is fundamental that it proceeds safely and correctly.
                 </p>
             </Value>
 
-            <Value iconComponent={<span className='font-bold mr-2'>2.</span>}>
+            <Value iconComponent={<span className='font-serif italic text-2xl mr-2'>02</span>}>
                 <div className='space-y-2'>
                     <p>
                         AGI Alignment, like the development of AGI itself, is a{' '}
@@ -23,7 +22,7 @@ function Values() {
                 </div>
             </Value>
 
-            <Value iconComponent={<span className='font-bold mr-2'>3.</span>}>
+            <Value iconComponent={<span className='font-serif italic text-2xl mr-2'>03</span>}>
                 <div className='space-y-2'>
                     <p>
                         Alignment is a <b>solvable problem, but also an urgent one</b>.{' '}

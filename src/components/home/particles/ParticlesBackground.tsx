@@ -28,10 +28,10 @@ const ParticlesBackground = () => {
             },
             particles: {
                 number: {
-                    value: 250,
+                    value: 350,
                     density: { enable: true, value_area: 800 },
                 },
-                color: { value: ['#FFFFFF', '#DEDEDE'] },
+                color: { value: ['#FFFFFF', '#FFFFFF', '#DEDEDE', '#D2D1D0', '#D2D1D0'] },
                 shape: { type: 'square' },
                 opacity: { value: 1 },
                 size: { value: 5 },
