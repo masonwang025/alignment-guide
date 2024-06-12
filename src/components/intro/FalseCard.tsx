@@ -1,4 +1,5 @@
 import { XMarkIcon } from '@heroicons/react/24/solid';
+import Toggle from '../elements/Toggle';
 
 function FalseCard({ title, children }: { title: string; children: React.ReactNode }) {
     return (
@@ -6,9 +7,10 @@ function FalseCard({ title, children }: { title: string; children: React.ReactNo
             <span className='font-bold mr-5'>
                 <XMarkIcon className='size-6 text-red-700' />
             </span>
-            <div className='space-y-2'>
-                <p className='text-red-700'>{title}</p>
-                {children}
+            <div className='space-y-2 w-full'>
+                <Toggle className='-mt-6' title={<p className='text-red-700 w-full'>{title}</p>}>
+                    {children}
+                </Toggle>
             </div>
         </div>
     );
