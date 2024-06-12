@@ -102,7 +102,7 @@ export default function Index() {
                     className='space-between vertical center-h'
                 >
                     <div />
-                    <div className='flex flex-col vertical center-h space-y-10'>
+                    <div className='flex flex-col vertical center-h space-y-10 max-w-4xl'>
                         <div className='font-serif sm:text-2xl md:text-3xl text-xl text-center vertical space-y-2'>
                             <div>As AI nears and surpasses human-level intelligence, the fate of our species will depend on its actions. </div>
                             <div><span className='italic'>So we must figure out how to steer and control these systems.</span></div>
@@ -132,21 +132,31 @@ export default function Index() {
                     <div />
                     <div className='lg:px-24 md:px-36 sm:px-32 px-16 sm:space-y-20 space-y-10 pt-5'>
                         <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-0 items-center'>
-                            <div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-r'>
-                                <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>01</span>
-                                <div className='sm:text-2xl md:text-3xl text-xl'>Why alignment urgently matters</div>
+                            <div className='p-4 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-r'>
+                                <Link href="/introduction" className='vertical sm:space-y-2 space-y-0'>
+                                    <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>01</span>
+                                    <div className='sm:text-2xl md:text-3xl text-xl'>Why alignment urgently matters</div>
+                                </Link>
                             </div>
+
                             <div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-gray-300'>
-                                <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>02</span>
-                                <div className='sm:text-2xl md:text-3xl text-xl'>Overview of current efforts</div>
+                                <Link href="/introduction" className='vertical sm:space-y-2 space-y-0'>
+                                    <span className='italic text-accent-6000 text-lg sm:text-xl lg:text-2xl'>02</span>
+                                    <div className='sm:text-2xl md:text-3xl text-xl'>Overview of current efforts</div>
+                                </Link>
                             </div>
                             <div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-b-0 lg:border-r'>
-                                <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>03</span>
-                                <div className='sm:text-2xl md:text-3xl text-xl'>Research directions</div>
+                                <Link href="/introduction" className='vertical sm:space-y-2 space-y-0'>
+                                    <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>03</span>
+                                    <div className='sm:text-2xl md:text-3xl text-xl'>Research directions</div>
+                                </Link>
                             </div>
+
                             <div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl'>
-                                <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>04</span>
-                                <div className='sm:text-2xl md:text-3xl text-xl'>Next steps</div>
+                                <Link href="/introduction" className='vertical sm:space-y-2 space-y-0'>
+                                    <span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>04</span>
+                                    <div className='sm:text-2xl md:text-3xl text-xl'>Next steps</div>
+                                </Link>
                             </div>
                         </div>
 
