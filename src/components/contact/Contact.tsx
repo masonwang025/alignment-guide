@@ -3,7 +3,7 @@ import React from "react";
 
 function Contact() {
     return (
-        <div className="mt-6">
+        <div className="my-6">
             <div className="flex flex-col md:flex-row w-full space-x-0 md:space-x-2 space-y-2 md:space-y-0">
                 <div className="md:w-1/2 w-full">
                     <ContactCard name="Mason Wang" email="mwang25@stanford.edu" twitterLink="https://twitter.com/masonwang025" website="https://masonjwang.com">
