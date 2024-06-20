@@ -185,7 +185,7 @@ export default function Index() {
             </div>
             <style jsx global>{`
                 .custom-cursor {
-                    cursor: none;
+                    cursor: none !important;
                 }
                 html {
                     scroll-behavior: smooth;

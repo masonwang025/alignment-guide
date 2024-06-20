@@ -35,6 +35,18 @@ const config: CustomDocsThemeConfig = {
             titleTemplate: router.pathname === '/' ? title : `%s – ${title}`,
             defaultTitle: title,
             description,
+            openGraph: {
+                title,
+                description,
+                images: [
+                    {
+                        url: '/opengraph-image.jpg',
+                        width: 1200,
+                        height: 600,
+                        alt: 'AI Alignment Guide',
+                    },
+                ],
+            },
             icons: [{ url: '/favicon.ico', type: 'image/x-icon' }],
         };
     },
