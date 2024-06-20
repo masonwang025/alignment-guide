@@ -5,6 +5,7 @@ import TextWrapper from './src/components/global/TextWrapper';
 import LinkWrapper from './src/components/global/LinkWrapper';
 import Logo from './src/components/global/Logo';
 import Footer from './src/components/global/Footer';
+// import Head from './src/components/global/Head';
 
 interface CustomDocsThemeConfig extends Omit<DocsThemeConfig, 'components'> {
     components?: {
