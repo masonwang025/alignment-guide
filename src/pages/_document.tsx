@@ -4,6 +4,7 @@ function Document() {
   return (
     <Html>
       <Head>
+        <meta property="title" content="AI Alignment Guide" />
         <meta property="og:title" content="AI Alignment Guide" />
         <meta property="og:description" content="" />
         <meta property="og:image" content="/opengraph-image.jpg" />
