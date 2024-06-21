@@ -170,24 +170,13 @@ export default function Index() {
 								<Button text={'Open Guide'} />
 							</Link>
 						</div>
-
-						{/* <div className='border border-neutral-300 rounded-lg p-5 spacing-y-5'>
-                            <h1 className='font-serif md:text-4xl text-3xl text-center mb-2'>Introduction</h1>
-                            <p className='text-lg text-center pb-5'>What we think you should read or do first</p>
-                            <div className='flex flex-col items-center justify-center space-y-5'>
-                                <Link href='/introduction'>
-                                    <p className='bg-background text-black py-2 px-4 rounded-lg shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] transition-shadow duration-200 hover:shadow-[inset_0.2rem_0.2rem_0.5rem_rgb(225,226,228),inset_-0.2rem_-0.2rem_0.5rem_rgb(255,255,255)]'>
-                                        Open Guide
-                                    </p>
-                                </Link>
-                            </div>
-                        </div> */}
 					</div>
 					<Footer />
 				</Section>
 			</div>
 			<style jsx global>{`
-				.custom-cursor {
+				.custom-cursor,
+				.custom-cursor * {
 					cursor: none !important;
 				}
 				html {
