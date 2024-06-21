@@ -139,27 +139,27 @@ export default function Index() {
 						<div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-0 items-center'>
 							<div className='p-4 text-center font-serif xl:text-3xl border-b border-neutral-300 lg:border-r'>
 								<Link href='/introduction' className='vertical sm:space-y-2 space-y-0'>
-									<span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>01</span>
+									<span className='italic text-primary-600 text-lg sm:text-xl lg:text-2xl'>01</span>
 									<div className='sm:text-2xl md:text-3xl text-xl'>Why alignment urgently matters</div>
 								</Link>
 							</div>
 
 							<div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-neutral-300'>
 								<Link href='/introduction' className='vertical sm:space-y-2 space-y-0'>
-									<span className='italic text-accent-6000 text-lg sm:text-xl lg:text-2xl'>02</span>
+									<span className='italic text-primary-6000 text-lg sm:text-xl lg:text-2xl'>02</span>
 									<div className='sm:text-2xl md:text-3xl text-xl'>Overview of current efforts</div>
 								</Link>
 							</div>
 							<div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-neutral-300 lg:border-b-0 lg:border-r'>
 								<Link href='/introduction' className='vertical sm:space-y-2 space-y-0'>
-									<span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>03</span>
+									<span className='italic text-primary-600 text-lg sm:text-xl lg:text-2xl'>03</span>
 									<div className='sm:text-2xl md:text-3xl text-xl'>Research directions</div>
 								</Link>
 							</div>
 
 							<div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl'>
 								<Link href='/introduction' className='vertical sm:space-y-2 space-y-0'>
-									<span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>04</span>
+									<span className='italic text-primary-600 text-lg sm:text-xl lg:text-2xl'>04</span>
 									<div className='sm:text-2xl md:text-3xl text-xl'>Next steps</div>
 								</Link>
 							</div>

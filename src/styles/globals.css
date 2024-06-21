@@ -72,7 +72,7 @@ body {
 
 /* sidebar active button color */
 .nextra-sidebar-container .nx-bg-primary-100 {
-	@apply bg-accent-400 !important;
+	@apply bg-primary-400 !important;
 }
 
 /* sidebar dropdown line */
@@ -82,10 +82,10 @@ body {
 
 /* breadcrumb (little text at the top of the page) */
 .nextra-breadcrumb .nx-text-gray-700 {
-	@apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
+	@apply text-primary-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
 }
 .nextra-breadcrumb {
-	@apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
+	@apply text-primary-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
 }
 
 /* search results container (otherwise blur header gets rid of this opacity) */
@@ -95,7 +95,7 @@ body {
 
 /* search results highlighted text color */
 .nextra-search .nextra-scrollbar .nx-text-primary-600 {
-	@apply text-[#8B8478] bg-[#F2F2F1] rounded-[.25rem] !important;
+	@apply text-accent bg-[#F2F2F1] rounded-[.25rem] !important;
 	/* @apply bg-[#E4E4E4] rounded-[.25rem] !important; */
 	/* @apply text-[#B7ADA3] !important; */
 }

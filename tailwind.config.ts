@@ -19,11 +19,14 @@ const config = {
 					DEFAULT: '#EBEBEB', // Gray92
 					light: '#F2F2F2', // Gray95
 				},
-				accent: {
+				primary: {
 					300: '#E4E4E4',
 					400: '#DEDEDE',
 					500: '#ACAAA8',
 					600: '#767676',
+				},
+				accent: {
+					DEFAULT: '#8B8478',
 				},
 				highlight: {
 					DEFAULT: '#EFDCCB',

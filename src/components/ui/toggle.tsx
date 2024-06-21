@@ -17,14 +17,12 @@ const ToggleTrigger = React.forwardRef<React.ElementRef<typeof AccordionPrimitiv
 		<AccordionPrimitive.Header className='flex'>
 			<AccordionPrimitive.Trigger
 				ref={ref}
-				className={cn(
-					'flex flex-1 font-sans text-base text-[#334155] items-start text-left justify-between space-x-5 py-4 transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
-					className
-				)}
+				className={cn('group font-sans text-base text-[#334155] items-start text-left justify-between space-x-2 py-4 transition-all hover:underline [&[data-state=open]>svg]:rotate-180', className)}
 				{...props}
 			>
-				{children}
-				<ChevronDown className='size-5 p-0.5 bg-accent-400 rounded-full text-accent-600 shrink-0 transition-transform duration-200' />
+				{/* {children} */}
+				<div className='inline group-hover:text-gray-500 groupp-hover:opacity-80'>{children}</div>
+				<ChevronDown className='inline size-5 p-0.5 bg-primary-400 text-primary-600 group-hover:bg-gray-600 group-hover:text-white rounded-full shrink-0 transition-transform duration-200' />
 			</AccordionPrimitive.Trigger>
 		</AccordionPrimitive.Header>
 	)
