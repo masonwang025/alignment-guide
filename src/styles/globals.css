@@ -108,8 +108,9 @@ body {
 	/* @apply text-[#B7ADA3] !important; */
 }
 
+/* table of contents highlighted color */
 .nextra-toc .nx-text-primary-600 {
-	@apply text-[#8B8478] !important;
+	@apply text-accent-500 !important;
 }
 
 /* border color (to accomodate darker bg) */
