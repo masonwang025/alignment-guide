@@ -3,12 +3,12 @@ import React from 'react';
 
 const RiskTable = () => {
 	const tableClass = 'table-auto w-full border-collapse border border-neutral-300';
-	const cellClass = 'border border-neutral-300 py-2 px-4 md:px-8';
+	const cellClass = 'border border-neutral-300 py-3 px-4 md:px-8';
 	const headerClass = `${cellClass} font-bold px-4 md:px-8 text-center`;
 	const textCenterClass = `${cellClass} text-center`;
 
 	return (
-		<div className='flex justify-center items-center'>
+		<div className='flex justify-center items-center sm:py-4'>
 			<div className='bg-neutral-50 rounded-lg'>
 				<table className={tableClass}>
 					<thead>
