@@ -113,6 +113,10 @@ body {
 	@apply text-accent-500 !important;
 }
 
+.nx-flex.nx-flex-col.nx-gap-1.nx-relative::before {
+	@apply bg-neutral-300 !important;
+}
+
 /* border color (to accomodate darker bg) */
 *,
 ::before,
