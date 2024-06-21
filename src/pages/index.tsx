@@ -117,7 +117,7 @@ export default function Index() {
 					</div>
 
 					<div className='flex flex-col vertical center-h' onClick={() => handleScroll('3')}>
-						<p className='text-lg pb-5 text-center'>Here's a guide to get started</p>
+						<p className='md:text-lg pb-5 text-center'>Here's a guide to get started</p>
 						<motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 1 }} style={{ zIndex: 5 }}>
 							<Image src={ChevronDown} alt='chevron-down' width={30} height={30} />
 						</motion.div>
@@ -137,20 +137,20 @@ export default function Index() {
 					<div />
 					<div className='lg:px-24 md:px-36 sm:px-32 px-16 sm:space-y-20 space-y-10 pt-5'>
 						<div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-0 items-center'>
-							<div className='p-4 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-r'>
+							<div className='p-4 text-center font-serif xl:text-3xl border-b border-zinc-300 lg:border-r'>
 								<Link href='/introduction' className='vertical sm:space-y-2 space-y-0'>
 									<span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>01</span>
 									<div className='sm:text-2xl md:text-3xl text-xl'>Why alignment urgently matters</div>
 								</Link>
 							</div>
 
-							<div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-gray-300'>
+							<div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-zinc-300'>
 								<Link href='/introduction' className='vertical sm:space-y-2 space-y-0'>
 									<span className='italic text-accent-6000 text-lg sm:text-xl lg:text-2xl'>02</span>
 									<div className='sm:text-2xl md:text-3xl text-xl'>Overview of current efforts</div>
 								</Link>
 							</div>
-							<div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-gray-300 lg:border-b-0 lg:border-r'>
+							<div className='p-4 sm:space-y-2 space-y-0 text-center font-serif xl:text-3xl border-b border-zinc-300 lg:border-b-0 lg:border-r'>
 								<Link href='/introduction' className='vertical sm:space-y-2 space-y-0'>
 									<span className='italic text-accent-600 text-lg sm:text-xl lg:text-2xl'>03</span>
 									<div className='sm:text-2xl md:text-3xl text-xl'>Research directions</div>
@@ -171,7 +171,7 @@ export default function Index() {
 							</Link>
 						</div>
 
-						{/* <div className='border border-gray-300 rounded-lg p-5 spacing-y-5'>
+						{/* <div className='border border-zinc-300 rounded-lg p-5 spacing-y-5'>
                             <h1 className='font-serif md:text-4xl text-3xl text-center mb-2'>Introduction</h1>
                             <p className='text-lg text-center pb-5'>What we think you should read or do first</p>
                             <div className='flex flex-col items-center justify-center space-y-5'>
