@@ -1,13 +1,13 @@
-import Promise from "@/components/elements/Promise";
-import CustomAlert from "@/components/elements/CustomAlert";
-import Toggle from "@/components/elements/Toggle";
+import Promise from '@/components/elements/Promise';
+import CustomAlert from '@/components/elements/CustomAlert';
+import Toggle from '@/components/elements/Toggle';
 
 # How do we actually align AI?
 
 <Promise>
 How do we, humans, actually go about aligning an intelligence far superior to our own?
 
-**After reading this, you will know actionable next steps we can take to align superintelligence.**
+**After reading this, you will understand a framework that you can use to think about aligning superintelligence.**
 
 </Promise>
 
@@ -28,15 +28,17 @@ A combination of scaled-up versions of current methods is likely to be enough to
 <Toggle title={<div><b>RLHF:</b> Although RLHF won’t scale to qualitatively superior AGI, we can use expert-level humans across all domains to generate extremely high-quality feedback signals on advanced data.</div>}>
 
     The reason RLHF, as it stands, will not scale to superhuman AGI is because of its reliance on human labels. If the AGI is doing something completely incomprehensible, we won’t be able to label it appropriately, so we won’t be able to design the appropriate reward signal.
+
 </Toggle>
 <Toggle title={<div><b>Scalable Oversight:</b> We can also design AI systems to help us supervise other AI systems. For example, although humans cannot parse millions of lines of code in seconds, if we train an AI system to point out suspicious code, we can drastically reduce the amount of code we need to vet.</div>}>
     This raises the question, “But how can we verify that the code-checking AI is trustworthy?” this is likely a much more solvable problem, as such a system would not have general intelligence. We can probably safety-check these systems as we improve them.
 </Toggle>
 
-Importantly, at this stage, *humans will be in the loop* and can still verify what these AI systems are actually doing. 
+Importantly, at this stage, _humans will be in the loop_ and can still verify what these AI systems are actually doing.
 
 ## Aligning qualitatively superior AGI
-A different paradigm will be necessary for aligning qualitatively superior AGI: it will be crucial to automate alignment research. 
+
+A different paradigm will be necessary for aligning qualitatively superior AGI: it will be crucial to automate alignment research.
 
 As Leopold discusses in his essay, AI capability research will certainly become automated, and alignment research will also have to be automated in order to keep up. The following is the rough framework for how automating alignment research would go:
 
@@ -44,15 +46,20 @@ As Leopold discusses in his essay, AI capability research will certainly become 
 2. Use system S<sub>0</sub> to build another system S<sub>1</sub> that is slightly smarter than S<sub>0</sub>
 3. Repeat inductively.
 
-<Toggle title={<div>In this way, aligning superintelligence becomes less like an ant trying to align with a human and more like a high school student trying to align with an undergraduate student, that undergraduate student trying to align with a graduate student, and so on.</div>}>
-    
-    A natural question then is, “Is this much weaker form of the alignment problem possible?” We have some evidence that the answer is “Yes.”
-    
-    OpenAI, in their Weak-to-Strong Generalization work, showed that one can use a GPT-2-level model to elicit most of GPT-4’s abilities despite GPT-2’s relative lack of intelligence.
-    
-    While there is still much work to be done here, this is an important first step in showing that some versions of the alignment problem are possible and that perhaps we can bootstrap solutions to weaker versions of the problem to solve the general problem.
+<Toggle
+	title={
+		<div>
+			In this way, aligning superintelligence becomes less like an ant trying to align with a human and more like a high school student trying to align with an undergraduate student, that
+			undergraduate student trying to align with a graduate student, and so on.
+		</div>
+	}
+>
+	A natural question then is, “Is this much weaker form of the alignment problem possible?” We have some evidence that the answer is “Yes.” OpenAI, in their Weak-to-Strong Generalization work, showed
+	that one can use a GPT-2-level model to elicit most of GPT-4’s abilities despite GPT-2’s relative lack of intelligence. While there is still much work to be done here, this is an important first
+	step in showing that some versions of the alignment problem are possible and that perhaps we can bootstrap solutions to weaker versions of the problem to solve the general problem.
 </Toggle>
 
 ## Necessary actions for both aspects
+
 - [Interpretability](https://transformer-circuits.pub/): Advancements in interpretability, both at the mechanistic and top-down level, are likely also to be extremely helpful in aligning AI
 - [Adversarial Measurement](https://arxiv.org/abs/2202.03286): We don’t have effective methods to determine whether the systems we are building will be safe post-training, so improving our current approaches to red-teaming models will likely be crucial.
