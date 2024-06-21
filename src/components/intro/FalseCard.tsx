@@ -1,5 +1,5 @@
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { XCircleIcon } from '@heroicons/react/24/solid';
-import Toggle from '../elements/Toggle';
 
 function FalseCard({ title, children }: { title: string; children: React.ReactNode }) {
 	return (
@@ -7,11 +7,12 @@ function FalseCard({ title, children }: { title: string; children: React.ReactNo
 			<span className='font-bold mr-5'>
 				<XCircleIcon className='size-6 text-red-700 mt-2.5' />
 			</span>
-			<div className='space-y-2 w-full'>
-				<Toggle className='' title={<p className='w-full'>{title}</p>}>
-					{children}
-				</Toggle>
-			</div>
+			<Accordion type='single' collapsible className='w-full'>
+				<AccordionItem value='item-1' className='border-0 pb-0'>
+					<AccordionTrigger className='py-0 my-2 hover:no-underline'>{<span className='mr-2'>{title}</span>}</AccordionTrigger>
+					<AccordionContent className='pb-0 pr-2 mr-2'>{children}</AccordionContent>
+				</AccordionItem>
+			</Accordion>
 		</div>
 	);
 }

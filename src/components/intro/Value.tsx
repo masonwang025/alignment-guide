@@ -1,3 +1,4 @@
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import Toggle from '../elements/Toggle';
 
 function Value({ iconComponent, title, children }: { iconComponent: React.ReactNode; title: string | React.ReactNode; children?: React.ReactNode }) {
@@ -6,11 +7,12 @@ function Value({ iconComponent, title, children }: { iconComponent: React.ReactN
 			<span className='mr-5'>{iconComponent}</span>
 			<div className='flex-grow'>
 				{children ? (
-					<div className='-mt-1'>
-						<Toggle className='' title={<span className='mr-5'>{title}</span>}>
-							<div className='space-y-2'>{children}</div>
-						</Toggle>
-					</div>
+					<Accordion type='single' collapsible className='-mt-1'>
+						<AccordionItem value='item-1' className='border-0 pb-0'>
+							<AccordionTrigger className='py-0 my-2 hover:no-underline'>{title}</AccordionTrigger>
+							<AccordionContent className='pb-0 pr-2'>{children}</AccordionContent>
+						</AccordionItem>
+					</Accordion>
 				) : (
 					<div className='pr-2'>{title}</div>
 				)}
