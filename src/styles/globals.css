@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -77,9 +76,8 @@ body {
 }
 
 /* sidebar dropdown line */
-.nextra-sidebar-container .nx-bg-gray-200 {
-	/* before:nx-bg-gray-200 */
-	@apply !bg-red-300 !border-red-300 !opacity-100 !important;
+.nx-flex.nx-flex-col.nx-gap-1.nx-relative::before {
+	@apply bg-neutral-300 !important;
 }
 
 /* breadcrumb (little text at the top of the page) */
@@ -88,12 +86,6 @@ body {
 }
 .nextra-breadcrumb {
 	@apply text-accent-600 uppercase tracking-[0.06rem] text-[0.85rem] !important;
-}
-
-/* TOC bottom bg and shadow color */
-.nextra-toc .nextra-scrollbar .nx-bg-white {
-	@apply bg-background !important;
-	@apply shadow-none !important;
 }
 
 /* search results container (otherwise blur header gets rid of this opacity) */
@@ -108,13 +100,20 @@ body {
 	/* @apply text-[#B7ADA3] !important; */
 }
 
-/* table of contents highlighted color */
-.nextra-toc .nx-text-primary-600 {
-	@apply text-accent-500 !important;
+/* table of contents bottom bg and shadow color */
+.nextra-toc .nextra-scrollbar .nx-bg-white {
+	@apply bg-background !important;
+	@apply shadow-none !important;
 }
 
-.nx-flex.nx-flex-col.nx-gap-1.nx-relative::before {
-	@apply bg-neutral-300 !important;
+/* table of contents highlighted color */
+.nextra-toc .nx-text-primary-600 {
+	@apply text-zinc-500 !important;
+}
+
+/* table of contents unhighlighted and hover color */
+.nextra-toc .nx-inline-block.nx-text-gray-500 {
+	@apply text-zinc-400 hover:text-gray-900 !important;
 }
 
 /* border color (to accomodate darker bg) */
