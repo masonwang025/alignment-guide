@@ -1,10 +1,16 @@
+import Image from 'next/image';
 import Values from '../components/intro/Values';
 import FalseCard from '../components/intro/FalseCard';
 import CTA from '../components/intro/CTA';
+import circles from '../assets/circles.png';
+import circlesMobile from '../assets/circles-mobile.png';
 
 # Introduction
 
-![Circles Graphic](../assets/circles.png)
+<div className='relative'>
+	<Image src={circles} alt='Circles Graphic' className='hidden sm:block' />
+	<Image src={circlesMobile} alt='Circles Graphic Mobile' className='block sm:hidden' />
+</div>
 
 ## Here's what we believe:
 
@@ -22,8 +28,9 @@ import CTA from '../components/intro/CTA';
         An AGI doesn't need animosity towards humans to be dangerous. Just as autonomous drones can be dangerous without consciousness, a misaligned AGI, with its significantly greater potential, could be far more
         hazardous.
 
-        Here's another example to demonstrate that even AI today can cause real damage: if AI agents were able to successfully optimize for both making and spending money, they would be able to take actions with real impact. This is incredibly plausible: agents like Cognition Labs's [Devin](https://www.cognition.ai/blog/introducing-devin) are *already* able make money by completing freelance jobs. 
+        Here's another example to demonstrate that even AI today can cause real damage: if AI agents were able to successfully optimize for both making and spending money, they would be able to take actions with real impact. This is incredibly plausible: agents like Cognition Labs's [Devin](https://www.cognition.ai/blog/introducing-devin) are *already* able make money by completing freelance jobs.
     </FalseCard>
+
 </div>
 
 ## What's this all about?
