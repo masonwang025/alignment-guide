@@ -34,8 +34,10 @@ import Sources from '@/components/global/Sources';
    		</span>
    	}
    >
-   	- Human intelligence is fundamentally limited by our biological constraints. For example, we have hard bounds like neuron firing rates and brain size. - In contrast, AGI will **not** have such
-   	size bounds and will **not** be restricted to the types of algorithms implementable in the human brain.
+   	<ul style={{ listStyleType: 'disc', paddingLeft: '20px' }} className='space-y-3 pb-3'>
+   		<li>Human intelligence is fundamentally limited by our biological constraints. For example, we have hard bounds like neuron firing rates and brain size.</li>
+   		<li>In contrast, AGI will **not** have such size bounds and will **not** be restricted to the types of algorithms implementable in the human brain.</li>
+   	</ul>
    </Toggle>
 
    <Toggle
@@ -45,9 +47,16 @@ import Sources from '@/components/global/Sources';
    		</span>
    	}
    >
-   	- **Software-level**: An artificial general intelligence will eventually have the capability to self-improve autonomously, leading to an exponential increase in the types of algorithms it will be
-   	able to learn and implement. - **Hardware-level**: Bostrom suggests that significant computational resources *already exist* that are underutilized. When an AI can leverage this existing hardware
-   	effectively, it will instantly and dramatically increase its intelligence.
+   	<ul style={{ listStyleType: 'disc', paddingLeft: '20px' }} className='space-y-3'>
+   		<li>
+   			<span className='font-bold'>Software-level</span>: An artificial general intelligence will eventually have the capability to self-improve autonomously, leading to an exponential increase in
+   			the types of algorithms it will be able to learn and implement
+   		</li>
+   		<li>
+   			<span className='font-bold'>Hardware-level</span>: Bostrom suggests that significant computational resources *already exist* that are underutilized. When an AI can leverage this existing
+   			hardware effectively, it will instantly and dramatically increase its intelligence.
+   		</li>
+   	</ul>
    </Toggle>
 
 ---
@@ -62,10 +71,17 @@ import Sources from '@/components/global/Sources';
    		</span>
    	}
    >
-   	- **Goal preservation**: An AI system will recognize actions that would increase the likelihood of committing actions antithetical to its goals. For example, if Gandhi, a pacifist, possessed a
-   	pill that would make him want to kill people, he would not take the pill. Similarly, an AI will avoid actions that could compromise its original objectives, even if those objectives are no longer
-   	ideal. - **Self-preservation**: An AI system will recognize actions that, if undertaken, would increase the likelihood of endangering its existence. For example, if the AI knew that a certain
-   	action would lead to it being "turned off," it will deceive humans to prevent this, as it cannot achieve its objectives if it is no longer operational.
+   	<ul style={{ listStyleType: 'disc', paddingLeft: '20px' }} className='space-y-3'>
+   		<li>
+   			<span className='font-bold'>Goal preservation</span>: An AI system will recognize actions that would increase the likelihood of committing actions antithetical to its goals. For example, if
+   			Gandhi, a pacifist, possessed a pill that would make him want to kill people, he would not take the pill. Similarly, an AI will avoid actions that could compromise its original objectives,
+   			even if those objectives are no longer ideal.
+   		</li>
+   		<li>
+   			<span className='font-bold'>Self-preservation</span>: An AI system will recognize actions that, if undertaken, would increase the likelihood of endangering its existence. For example, if the
+   			AI knew that a certain action would lead to it being "turned off," it will deceive humans to prevent this, as it cannot achieve its objectives if it is no longer operational.
+   		</li>
+   	</ul>
    </Toggle>
 
    - This problem is even harder because it’s not enough to create an aligned AGI. We must **create an aligned AGI that prevents other unaligned AGI from being created.** I.e. we will need to build an AI system capable of contributing a **weak pivotal act.**
