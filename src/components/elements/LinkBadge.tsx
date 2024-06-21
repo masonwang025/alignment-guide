@@ -8,7 +8,7 @@ function LinkBadge({ href, newWindow, icon, className, children }: { href: strin
 		<Link
 			href={href}
 			target={newWindow ? '_blank' : undefined}
-			className={`trans inline-block bg-background-light border border-zinc-400 px-2.5 py-[0.75] hover:bg-zinc-50 rounded-lg ${className}`}
+			className={`trans inline-block bg-background-light border border-neutral-400 px-2.5 py-[0.75] hover:bg-neutral-50 rounded-lg ${className}`}
 			rel={newWindow ? 'noopener noreferrer' : undefined}
 		>
 			<span className='horizontal center-v space-x-1.5'>

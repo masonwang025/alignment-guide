@@ -108,11 +108,15 @@ body {
 	/* @apply text-[#B7ADA3] !important; */
 }
 
+.nextra-toc .nx-text-primary-600 {
+	@apply text-[#8B8478] !important;
+}
+
 /* border color (to accomodate darker bg) */
 *,
 ::before,
 ::after {
-	@apply border-zinc-300 !important;
+	@apply border-neutral-300 !important;
 }
 
 /* footer bg color */
@@ -139,7 +143,7 @@ h1 {
 }
 
 h2 {
-	@apply !font-serif !text-3xl !mt-7 !mb-7 !pb-2 !border-b border-zinc-300 text-dark !font-normal;
+	@apply !font-serif !text-3xl !mt-7 !mb-7 !pb-2 !border-b border-neutral-300 text-dark !font-normal;
 }
 
 h3 {

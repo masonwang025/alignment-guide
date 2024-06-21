@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Logo from './Logo';
 
 const Footer = () => (
-	<div className='flex flex-row justify-between items-center border-t border-zinc-300 px-5 sm:py-10 py-7'>
+	<div className='flex flex-row justify-between items-center border-t border-neutral-300 px-5 sm:py-10 py-7'>
 		<Link href='/' className='hover:opacity-75'>
 			<Logo footer />
 		</Link>

@@ -4,14 +4,14 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/utils/shadcn-utils';
 
 const alertVariants = cva(
-	'relative horizontal w-full rounded-lg border border-zinc-200 p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 dark:border-zinc-800',
+	'relative horizontal w-full rounded-lg border border-neutral-200 p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 dark:border-neutral-800',
 	{
 		variants: {
 			variant: {
-				default: 'bg-white text-zinc-950',
+				default: 'bg-white text-neutral-950',
 				info: 'bg-blue-50 text-blue-500',
 				warning: 'bg-orange-50 text-orange-600 !border-orange-600',
-				primary: 'bg-zinc-700 text-white',
+				primary: 'bg-neutral-700 text-white',
 			},
 		},
 		defaultVariants: {
@@ -21,7 +21,7 @@ const alertVariants = cva(
 );
 
 const textColorVariants = {
-	default: 'text-zinc-950',
+	default: 'text-neutral-950',
 	info: 'text-blue-500',
 	warning: 'text-orange-500',
 	primary: 'text-white',

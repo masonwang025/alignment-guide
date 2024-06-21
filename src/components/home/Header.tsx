@@ -10,13 +10,13 @@ const Header = () => {
 			<Logo />
 			<nav className='flex gap-5'>
 				<Link href='/quickstart'>
-					<p className='text-sm text-zinc-600 hover:text-zinc-800'>Quickstart</p>
+					<p className='text-sm text-neutral-600 hover:text-neutral-800'>Quickstart</p>
 				</Link>
 				<Link href='/about'>
-					<p className='text-sm text-zinc-600 hover:text-zinc-800'>About</p>
+					<p className='text-sm text-neutral-600 hover:text-neutral-800'>About</p>
 				</Link>
 				<Link href='/contact'>
-					<p className='text-sm text-zinc-600 hover:text-zinc-800'>Contact</p>
+					<p className='text-sm text-neutral-600 hover:text-neutral-800'>Contact</p>
 				</Link>
 			</nav>
 		</header>
