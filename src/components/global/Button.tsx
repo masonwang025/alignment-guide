@@ -11,8 +11,8 @@ const Button = ({ text, darker }: { text: string; darker?: boolean }) => {
 			} text-black md:text-lg font-light hover:font-normal hover:font-serif hover:italic hover:md:text-xl hover:text-lg hover:tracking-wide py-3 px-6 rounded-2xl transition-shadow duration-200`}
 		>
 			<div className='flex inline space-x-3 horizontal center-v'>
-				<p className='!no-underline'>{text}</p>
-				<p className='!font-sans !font-normal !md:text-lg !text-base !no-underline'>→</p>
+				<p>{text}</p>
+				<p className='!font-sans !font-normal !md:text-lg !text-base'>→</p>
 			</div>
 		</div>
 	);
